@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BTL Business Plan — Gareth Sutton — Barrow-in-Furness 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#eef2f7;color:#1e293b;font-size:14px;line-height:1.6}
+.wrap{max-width:1240px;margin:0 auto;padding:28px 20px}
+h1,h2,h3{color:#1a3557;font-weight:700}
+p{margin-bottom:10px;color:#334155}
+
+/* Cover */
+.cover{background:#1a3557;color:#fff;border-radius:12px;padding:44px 48px;margin-bottom:20px}
+.cover h1{font-size:34px;color:#fff;margin-bottom:6px}
+.cover .sub{font-size:18px;color:#7fb3d8;margin-bottom:28px}
+.cover .meta{font-size:13px;color:#90b8d0}
+.cover-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 0}
+.cstat{background:rgba(255,255,255,.1);border-radius:8px;padding:14px;text-align:center}
+.cstat .lbl{font-size:11px;color:#90b8d0;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.cstat .val{font-size:24px;font-weight:700;color:#fff;font-family:'Courier New',monospace}
+.cstat .sub{font-size:11px;color:#6a9fc0;margin-top:2px}
+
+/* Sections */
+.section{background:#fff;border-radius:10px;padding:26px 30px;margin-bottom:18px;border:1px solid #dde6f0}
+.sec-title{font-size:18px;font-weight:700;color:#1a3557;margin-bottom:14px;padding-bottom:10px;border-bottom:3px solid #2563a8}
+.sec-sub{font-size:14px;font-weight:700;color:#2563a8;margin:16px 0 8px}
+
+/* Proof box */
+.proof-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:14px 0}
+.pcard{border-radius:8px;padding:14px;text-align:center}
+.pcard.blue{background:#d6e4f5;border:1px solid #bcd4eb}
+.pcard.alt{background:#f0f6fe;border:1px solid #d6e8f9}
+.pcard.green{background:#dcfce7;border:1px solid #bbf7d0}
+.pcard .pl{font-size:11px;font-weight:700;color:#1a3557;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.pcard .pv{font-size:22px;font-weight:700;font-family:'Courier New',monospace;color:#1a3557}
+.pcard.green .pv{color:#166534}
+.pcard .ps{font-size:11px;color:#64748b;margin-top:3px}
+
+/* Info boxes */
+.ibox{border-radius:8px;padding:14px 16px;margin:12px 0}
+.ibox.blue{background:#eff6ff;border-left:4px solid #2563a8}
+.ibox.amber{background:#fffbeb;border-left:4px solid #d97706}
+.ibox.green{background:#f0fdf4;border-left:4px solid #16a34a}
+.ibox.red{background:#fff1f2;border-left:4px solid #e11d48}
+.ibox p{margin:0;font-size:13px;color:#1e293b}
+.ibox strong{color:#1a3557}
+
+/* Data tables */
+table.dt{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+table.dt th{font-size:11px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.06em;padding:7px 10px;border-bottom:2px solid #e2e8f0;background:#f8fafc;text-align:left}
+table.dt th.r{text-align:right}
+table.dt td{padding:7px 10px;border-bottom:1px solid #f1f5f9}
+table.dt td.r{text-align:right;font-family:'Courier New',monospace}
+table.dt tr:nth-child(even){background:#fafbff}
+table.dt tr.hit{background:#f0fdf4}
+table.dt tr.sep td{border-top:2px solid #e2e8f0;font-weight:700;background:#f8fafc}
+.badge{display:inline-block;padding:2px 10px;border-radius:5px;font-size:12px;font-weight:700}
+.badge.g{background:#dcfce7;color:#166534}
+.badge.r{background:#fee2e2;color:#991b1b}
+.badge.a{background:#fef3c7;color:#92400e}
+
+/* Two-col layout */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px}
+
+/* Calculator section */
+.calc-outer{display:flex;gap:0;margin-top:4px}
+.calc-sliders{width:280px;flex-shrink:0;border-right:1px solid #e2e8f0;padding-right:20px}
+.calc-results{flex:1;min-width:0;padding-left:22px}
+.sg{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin:14px 0 8px;padding-bottom:5px;border-bottom:1px solid #e2e8f0}
+.sr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+.sr label{font-size:12px;color:#475569}
+.sv{font-size:13px;font-weight:700;color:#1a3557;font-family:'Courier New',monospace}
+input[type=range]{width:100%;accent-color:#1a3557;margin-bottom:8px;cursor:pointer}
+.nt{font-size:10px;color:#cbd5e1;margin-top:-6px;margin-bottom:8px}
+.mc{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:11px 13px}
+.ml{font-size:11px;color:#64748b;margin-bottom:3px}
+.mv{font-size:19px;font-weight:700;font-family:'Courier New',monospace}
+.ms{font-size:11px;color:#94a3b8;margin-top:3px}
+.cbadge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:12px;font-weight:700}
+.results-grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-bottom:14px}
+.results-grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-bottom:14px}
+.th{font-size:11px;font-weight:600;color:#64748b;padding:5px 8px;border-bottom:1px solid #e2e8f0;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.td{padding:5px 8px;border-bottom:1px solid #f1f5f9;font-family:'Courier New',monospace;font-size:12px}
+
+@media print{
+  body{background:#fff}
+  .no-print{display:none!important}
+  .section{break-inside:avoid;box-shadow:none;border:1px solid #dde}
+  .pg-break{page-break-before:always}
+}
+@media(max-width:900px){
+  .calc-outer{flex-direction:column}
+  .calc-sliders{width:100%;border-right:none;border-bottom:1px solid #e2e8f0;padding-right:0;padding-bottom:16px;margin-bottom:16px}
+  .calc-results{padding-left:0}
+  .cover-grid,.two-col,.three-col,.results-grid4{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- COVER -->
+<div class="cover">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
+    <div>
+      <h1>Property Investment Business Plan</h1>
+      <div class="sub">Buy-to-Let Portfolio · Private Limited Company · BRRR Strategy · Barrow-in-Furness</div>
+      <div class="meta">Prepared by Gareth (Gaz) Sutton · April 2026 · Private &amp; Confidential</div>
+    </div>
+    <div style="text-align:right">
+      <div style="font-size:11px;color:#6a9fc0;text-transform:uppercase;letter-spacing:.1em">Investment sought</div>
+      <div style="font-size:36px;font-weight:700;color:#fff;font-family:'Courier New',monospace">£90,000</div>
+      <div style="font-size:13px;color:#7fb3d8">Director's Loan · 4% p.a. · 24mo deferred</div>
+    </div>
+  </div>
+  <div class="cover-grid">
+    <div class="cstat"><div class="lbl">Proof of concept</div><div class="val">1 done</div><div class="sub">already operating</div></div>
+    <div class="cstat"><div class="lbl">Post-refurb value</div><div class="val">£130k+</div><div class="sub">verified on existing property</div></div>
+    <div class="cstat"><div class="lbl">BRRR surplus/property</div><div class="val">£22,500</div><div class="sub">capital recycled + surplus</div></div>
+    <div class="cstat"><div class="lbl">Target income</div><div class="val">£2,000</div><div class="sub">per month from Year 4</div></div>
+  </div>
+</div>
+
+<!-- PROOF OF CONCEPT -->
+<div class="section">
+  <div class="sec-title">Proof of concept — already done once</div>
+  <p>This is not a theoretical proposal. Gareth Sutton has already executed this exact strategy and the figures below are real, verified outcomes from his existing buy-to-let property.</p>
+  <div class="proof-grid">
+    <div class="pcard blue"><div class="pl">Auction price</div><div class="pv">£50,000</div><div class="ps">hammer price paid</div></div>
+    <div class="pcard alt"><div class="pl">Renovation</div><div class="pv">£20,000</div><div class="ps">full refurbishment</div></div>
+    <div class="pcard alt"><div class="pl">Total all-in</div><div class="pv">~£75,000</div><div class="ps">inc. SDLT, legal, survey</div></div>
+    <div class="pcard blue"><div class="pl">Current value</div><div class="pv">£130,000+</div><div class="ps">post-refurb market value</div></div>
+    <div class="pcard green"><div class="pl">Equity created</div><div class="pv">~£55,000</div><div class="ps">from one deal</div></div>
+  </div>
+  <div class="ibox amber">
+    <p><strong>Auction guide prices vs hammer prices:</strong> Guide prices are set 20%+ below what sellers expect to achieve — a deliberate tactic to generate bidding interest. A guide of £30,000–£40,000 typically sells for £45,000–£55,000. All figures in this plan use £50,000 as the realistic hammer price, verified by Gareth's own completed purchase.</p>
+  </div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="section">
+  <div class="sec-title">Executive summary</div>
+  <div class="two-col">
+    <div>
+      <div class="sec-sub">The opportunity</div>
+      <p>Barrow-in-Furness offers an unusual combination: strong, stable, well-paid employment (anchored by BAE Systems' nuclear submarine programme — £31bn Dreadnought contracts through the 2030s plus AUKUS) and residential property prices well below the national average. Four-bedroom homes regularly appear at auction for £45,000–£55,000 hammer price; post-refurbishment they achieve valuations of £120,000–£140,000.</p>
+      <p>The BRRR model — Buy at auction, Refurbish, Refinance, Rent — allows a single initial investment to fund multiple properties in sequence. The 75% LTV mortgage on a £130,000 valuation returns £97,500, repaying the £75,000 all-in cost and generating a £22,500 surplus that funds the next acquisition. The model becomes self-sustaining within 12–18 months.</p>
+    </div>
+    <div>
+      <div class="sec-sub">The financials (verified)</div>
+      <p>At the current mortgage rate of 5.25% IO (April 2026, Ltd company 5-year fix), the mortgage on a £97,500 loan costs £426/month — 47% of the £900 rent from a 4-bed property. Net cash flow in Year 1 is £249/month per property. This is correct and expected for interest-only BTL.</p>
+      <p>The model works because the mortgage is fixed while rent grows. ONS data shows Westmorland &amp; Furness rents rose <strong>7.1%</strong> in the 12 months to December 2025. Using a conservative 5%/year, the same £249/month net in Year 1 becomes £443/month by Year 5 from the same fixed mortgage.</p>
+      <div class="ibox green"><p><strong>Rising property prices help, not hurt:</strong> At 3%/year growth (Barrow 5yr average: 14.4% per Land Registry), the 75% LTV drawdown on later properties grows proportionally — surpluses increase each year.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MARKET DATA -->
+<div class="section">
+  <div class="sec-title">Market data — verified April 2026</div>
+  <div class="two-col">
+    <div>
+      <div class="sec-sub">Property prices</div>
+      <table class="dt">
+        <tr><th>Metric</th><th class="r">Figure</th><th class="r">Source</th></tr>
+        <tr><td>Barrow avg house price</td><td class="r">~£161,000–£180,000</td><td class="r">Land Registry / Rightmove</td></tr>
+        <tr><td>5-year price growth</td><td class="r">+14.4% (~2.7%/yr)</td><td class="r">Property Solvers</td></tr>
+        <tr><td>N. West 12mo growth</td><td class="r">+4.1%</td><td class="r">ONS, Nov 2025</td></tr>
+        <tr><td>Ltd co BTL 5yr fix</td><td class="r">5.0%–5.5%</td><td class="r">NRLA / HOA, Apr 2026</td></tr>
+        <tr><td>Best personal BTL 5yr</td><td class="r">4.29% (TMW)</td><td class="r">HomeOwners Alliance</td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="sec-sub">Rental market</div>
+      <table class="dt">
+        <tr><th>Metric</th><th class="r">Figure</th><th class="r">Source</th></tr>
+        <tr><td>W&amp;F avg private rent</td><td class="r">£785/month</td><td class="r">ONS, Dec 2025</td></tr>
+        <tr><td>W&amp;F rent growth (12mo)</td><td class="r">+7.1%</td><td class="r">ONS, Dec 2025</td></tr>
+        <tr><td>Terraced/flat rent growth</td><td class="r">+7.4%</td><td class="r">ONS, Dec 2025</td></tr>
+        <tr><td>Plan uses (conservative)</td><td class="r">+5.0%/yr</td><td class="r">This plan</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- COMPANY & LOAN STRUCTURE -->
+<div class="section">
+  <div class="sec-title">Structure &amp; investor terms</div>
+  <div class="two-col">
+    <div>
+      <div class="sec-sub">Ltd company</div>
+      <p>A new Private Limited Company incorporated solely for this portfolio — completely separate from any other personal or business interests. SIC code 68209. Full mortgage interest deductibility. Corporation tax at 19% (small profits rate). Director's salary up to £12,570/year (0% income tax).</p>
+      <div class="sec-sub">Director's loan terms</div>
+      <table class="dt">
+        <tr><td>Loan amount</td><td class="r">£90,000</td></tr>
+        <tr><td>Breakdown</td><td class="r">£75,000 property + £15,000 working capital</td></tr>
+        <tr><td>Interest rate</td><td class="r">4% p.a., accruing from day 1</td></tr>
+        <tr><td>Years 1–2</td><td class="r">Interest deferred — stays in company</td></tr>
+        <tr><td>From month 25</td><td class="r">Quarterly payments begin</td></tr>
+        <tr><td>Capital repayment</td><td class="r">First refinance (Month 5) returns £97,500</td></tr>
+        <tr><td>Agreement</td><td class="r">Written terms — simple, informal</td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="sec-sub">Investor returns</div>
+      <table class="dt">
+        <tr><th>Period</th><th class="r">Treatment</th><th class="r">Cash to investor</th></tr>
+        <tr><td>Year 1</td><td class="r">£3,600 accrued</td><td class="r">£0</td></tr>
+        <tr><td>Year 2</td><td class="r">£3,600 accrued</td><td class="r">£0</td></tr>
+        <tr><td>Year 3</td><td class="r">4% on £97,200</td><td class="r">£3,672/yr · £918/qtr</td></tr>
+        <tr><td>Year 4+</td><td class="r">Quarterly payments</td><td class="r">£3,672/yr ongoing</td></tr>
+        <tr class="sep"><td>Total over 4 yrs</td><td class="r">Accrued + paid</td><td class="r">~£18,144</td></tr>
+      </table>
+      <div class="ibox green" style="margin-top:10px">
+        <p>First BRRR refinance (Month 5) returns £97,500 — enough to repay the full £90,000 loan immediately if preferred. Accrued interest settled at term end.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTERACTIVE CALCULATOR -->
+<div class="section pg-break">
+  <div class="sec-title">Interactive scenario calculator</div>
+  <p style="margin-bottom:16px;color:#475569">Adjust any slider to model different scenarios. All figures — cash flow, portfolio income, equity, and break-even points — update instantly. Use this to stress-test the plan against different acquisition costs, mortgage rates, rental income and growth assumptions.</p>
+
+  <div class="calc-outer">
+    <!-- SLIDERS -->
+    <div class="calc-sliders">
+      <div class="sg">Acquisition</div>
+      <div class="sr"><label for="sl-hammer">Hammer price</label><span class="sv" id="vl-hammer">£50,000</span></div>
+      <input type="range" min="10000" max="150000" step="1000" value="50000" id="sl-hammer">
+      <div class="sr"><label for="sl-reno">Renovation cost</label><span class="sv" id="vl-reno">£20,000</span></div>
+      <input type="range" min="0" max="60000" step="500" value="20000" id="sl-reno">
+      <div class="sr"><label for="sl-fees">Fees (SDLT + legal + survey)</label><span class="sv" id="vl-fees">£5,000</span></div>
+      <input type="range" min="1000" max="15000" step="250" value="5000" id="sl-fees">
+      <div class="sr"><label for="sl-prv">Post-refurb value</label><span class="sv" id="vl-prv">£130,000</span></div>
+      <input type="range" min="40000" max="300000" step="2500" value="130000" id="sl-prv">
+
+      <div class="sg">Finance</div>
+      <div class="sr"><label for="sl-ltv">LTV %</label><span class="sv" id="vl-ltv">75%</span></div>
+      <input type="range" min="60" max="80" step="5" value="75" id="sl-ltv">
+      <div class="sr"><label for="sl-mrate">Mortgage rate</label><span class="sv" id="vl-mrate">5.25%</span></div>
+      <input type="range" min="3" max="12" step="0.05" value="5.25" id="sl-mrate">
+      <div class="nt">Apr 2026: ~5.25% realistic for Ltd co 5yr fix</div>
+      <div class="sr"><label for="sl-iloan">Investor loan</label><span class="sv" id="vl-iloan">£90,000</span></div>
+      <input type="range" min="0" max="200000" step="5000" value="90000" id="sl-iloan">
+      <div class="sr"><label for="sl-irate">Investor rate</label><span class="sv" id="vl-irate">4%</span></div>
+      <input type="range" min="0" max="10" step="0.25" value="4" id="sl-irate">
+      <div class="sr"><label for="sl-defer">Interest deferred (months)</label><span class="sv" id="vl-defer">24 mo</span></div>
+      <input type="range" min="0" max="36" step="3" value="24" id="sl-defer">
+
+      <div class="sg">Rental income &amp; costs</div>
+      <div class="sr"><label for="sl-rent">Monthly rent</label><span class="sv" id="vl-rent">£900</span></div>
+      <input type="range" min="200" max="2000" step="25" value="900" id="sl-rent">
+      <div class="sr"><label for="sl-agent">Agent management fee</label><span class="sv" id="vl-agent">10%</span></div>
+      <input type="range" min="0" max="20" step="1" value="10" id="sl-agent">
+      <div class="sr"><label for="sl-maint">Maintenance reserve</label><span class="sv" id="vl-maint">5%</span></div>
+      <input type="range" min="0" max="15" step="0.5" value="5" id="sl-maint">
+      <div class="sr"><label for="sl-voidw">Void allowance (weeks/yr)</label><span class="sv" id="vl-voidw">2 wks</span></div>
+      <input type="range" min="0" max="12" step="0.5" value="2" id="sl-voidw">
+      <div class="sr"><label for="sl-ins">Insurance (£/month)</label><span class="sv" id="vl-ins">£55</span></div>
+      <input type="range" min="20" max="150" step="5" value="55" id="sl-ins">
+
+      <div class="sg">Growth rates</div>
+      <div class="sr"><label for="sl-rg">Annual rent growth</label><span class="sv" id="vl-rg">5%</span></div>
+      <input type="range" min="0" max="12" step="0.5" value="5" id="sl-rg">
+      <div class="nt">ONS W&amp;F actual: 7.1% (Dec 2025)</div>
+      <div class="sr"><label for="sl-hpg">Annual house price growth</label><span class="sv" id="vl-hpg">3%</span></div>
+      <input type="range" min="0" max="10" step="0.5" value="3" id="sl-hpg">
+      <div class="nt">Barrow 5yr avg: ~2.7%/yr (Land Registry)</div>
+
+      <div class="sg">Portfolio</div>
+      <div class="sr"><label for="sl-ppy">Properties per year</label><span class="sv" id="vl-ppy">2/yr</span></div>
+      <input type="range" min="0.5" max="5" step="0.5" value="2" id="sl-ppy">
+      <div class="sr"><label for="sl-yrs">Projection (years)</label><span class="sv" id="vl-yrs">8 yrs</span></div>
+      <input type="range" min="2" max="15" step="1" value="8" id="sl-yrs">
+      <div class="sr"><label for="sl-tgt">Monthly income target</label><span class="sv" id="vl-tgt">£2,000</span></div>
+      <input type="range" min="500" max="5000" step="100" value="2000" id="sl-tgt">
+    </div>
+
+    <!-- RESULTS -->
+    <div class="calc-results">
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;align-items:center">
+        <span style="font-size:13px;font-weight:700;color:#1a3557;margin-right:4px">Verdict:</span>
+        <span class="cbadge" id="cb-ratio">160% test</span>
+        <span class="cbadge" id="cb-brrr">BRRR capital</span>
+        <span class="cbadge" id="cb-cf">Cash flow</span>
+        <span class="cbadge" id="cb-tgt">Target income</span>
+      </div>
+
+      <div class="results-grid4">
+        <div class="mc"><div class="ml">All-in cost</div><div class="mv" id="rm-allin">—</div><div class="ms" id="rms-allin">—</div></div>
+        <div class="mc"><div class="ml">160% ratio</div><div class="mv" id="rm-ratio">—</div><div class="ms" id="rms-ratio">—</div></div>
+        <div class="mc"><div class="ml">BRRR surplus / shortfall</div><div class="mv" id="rm-surp">—</div><div class="ms" id="rms-surp">—</div></div>
+        <div class="mc"><div class="ml">Net / month (yr 1)</div><div class="mv" id="rm-net">—</div><div class="ms" id="rms-net">—</div></div>
+      </div>
+
+      <!-- Rent bar -->
+      <div class="mc" style="margin-bottom:14px">
+        <div style="font-size:12px;color:#64748b;margin-bottom:7px">Where does monthly rent go? (year 1)</div>
+        <div style="display:flex;height:26px;border-radius:5px;overflow:hidden;margin-bottom:7px" id="rent-bar"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px" id="rent-legend"></div>
+      </div>
+
+      <!-- Charts row -->
+      <div class="two-col" style="margin-bottom:14px">
+        <div class="mc">
+          <div style="font-size:12px;color:#64748b;margin-bottom:8px">Net profit/property — fixed mortgage, growing rent</div>
+          <div style="position:relative;height:185px"><canvas id="cc1" role="img" aria-label="Net monthly profit per property growing over years as rent increases while mortgage stays fixed"></canvas></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:5px" id="c1note">—</div>
+        </div>
+        <div class="mc">
+          <div style="font-size:12px;color:#64748b;margin-bottom:8px">BRRR — capital returned at different post-refurb values</div>
+          <table style="width:100%;border-collapse:collapse">
+            <thead><tr>
+              <th class="th" style="text-align:left">Post-refurb</th>
+              <th class="th" style="text-align:center">Ratio</th>
+              <th class="th" style="text-align:right">Mortgage out</th>
+              <th class="th" style="text-align:right">Surplus</th>
+              <th class="th" style="text-align:center">Pass?</th>
+            </tr></thead>
+            <tbody id="sens-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Portfolio income chart -->
+      <div class="mc" style="margin-bottom:14px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+          <div style="font-size:12px;color:#64748b">Monthly household income — portfolio build</div>
+          <div style="font-size:12px;font-weight:700;color:#1a3557" id="tgt-lbl">Target: £2,000/mo</div>
+        </div>
+        <div style="position:relative;height:185px"><canvas id="cc2" role="img" aria-label="Bar chart of projected monthly household income vs target over portfolio build years"></canvas></div>
+      </div>
+
+      <!-- BREAK-EVEN SUMMARY -->
+      <div class="mc" style="margin-bottom:14px">
+        <div style="font-size:13px;font-weight:700;color:#1a3557;margin-bottom:10px">Break-even analysis — what has to go wrong to break this plan?</div>
+        <table style="width:100%;border-collapse:collapse">
+          <thead><tr>
+            <th class="th" style="text-align:left">Variable</th>
+            <th class="th" style="text-align:center">Current</th>
+            <th class="th" style="text-align:center">Break-even point</th>
+            <th class="th" style="text-align:center">Safety margin</th>
+            <th class="th" style="text-align:center">Status</th>
+          </tr></thead>
+          <tbody id="be-body"></tbody>
+        </table>
+      </div>
+
+      <!-- Stress tests -->
+      <div class="results-grid3">
+        <div class="mc"><div class="ml">Max mortgage rate (CF neutral)</div><div class="mv" id="st-mr">—</div><div class="ms" id="st-mr-s">—</div></div>
+        <div class="mc"><div class="ml">Min post-refurb (all capital back)</div><div class="mv" id="st-prv">—</div><div class="ms" id="st-prv-s">—</div></div>
+        <div class="mc"><div class="ml">Min rent (CF neutral)</div><div class="mv" id="st-rent">—</div><div class="ms" id="st-rent-s">—</div></div>
+      </div>
+
+      <!-- Equity chart -->
+      <div class="mc" style="margin-top:14px;margin-bottom:14px">
+        <div style="font-size:12px;color:#64748b;margin-bottom:8px">Portfolio equity growth over time</div>
+        <div style="position:relative;height:150px"><canvas id="cc3" role="img" aria-label="Area chart showing portfolio equity growing over the projection period"></canvas></div>
+      </div>
+
+      <!-- Portfolio table -->
+      <div class="mc">
+        <div style="font-size:12px;color:#64748b;margin-bottom:8px">Year-by-year portfolio summary</div>
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;min-width:580px">
+            <thead><tr>
+              <th class="th" style="text-align:left">Yr</th>
+              <th class="th" style="text-align:center">Props</th>
+              <th class="th" style="text-align:right">Investor interest</th>
+              <th class="th" style="text-align:right">Net annual</th>
+              <th class="th" style="text-align:right">To household/mo</th>
+              <th class="th" style="text-align:right">Portfolio equity</th>
+            </tr></thead>
+            <tbody id="port-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RISK ANALYSIS -->
+<div class="section">
+  <div class="sec-title">Risk analysis</div>
+  <table class="dt">
+    <tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr>
+    <tr><td><strong>Nothing at auction</strong></td><td><span class="badge a">Medium</span></td><td>Multiple platforms (Auction House NW, SDL, BidX1). Local agents and probate solicitors for off-market stock. Patient strategy — never overpay.</td></tr>
+    <tr><td><strong>Post-refurb value disappoints</strong></td><td><span class="badge a">Medium</span></td><td>160% Rule vetoes any deal where this is projected. RICS valuation is independent check. One property already verified at £130k. Break-even shown in calculator above.</td></tr>
+    <tr><td><strong>Refurb cost overrun</strong></td><td><span class="badge a">Medium</span></td><td>Survey before bidding. Fixed-price quotes from tradespeople. 10% contingency in every budget. Gareth's trade background and contractor relationships.</td></tr>
+    <tr><td><strong>Mortgage rate rise</strong></td><td><span class="badge a">Medium</span></td><td>5-year fix locks in rate until 2031. Portfolio stress-tested via calculator — break-even rate shown live. Rent growth widens the margin each year.</td></tr>
+    <tr><td><strong>Void periods / problem tenants</strong></td><td><span class="badge g">Low</span></td><td>BAE contractor demand creates consistent tenant pool. Local agent manages referencing and TDS deposits. Void allowance already in projections.</td></tr>
+    <tr><td><strong>Regulatory change (EPC, S21)</strong></td><td><span class="badge a">Medium</span></td><td>Ltd company structure is most resilient. EPC improvements built into every refurb from day one. Accountant monitors changes.</td></tr>
+    <tr><td><strong>BAE contracts reduced</strong></td><td><span class="badge g">Low</span></td><td>Dreadnought + AUKUS contracted through 2030s+. Even without BAE, Barrow has established residential demand at these price points.</td></tr>
+  </table>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="section">
+  <div class="sec-title">Next steps</div>
+  <table class="dt">
+    <tr><th>#</th><th>Action</th><th>Who</th><th>When</th></tr>
+    <tr><td>1</td><td>Investor confirms commitment and loan amount</td><td>Both</td><td>Week 1</td></tr>
+    <tr><td>2</td><td>Written loan terms agreed and signed by both parties</td><td>Gareth</td><td>Week 1</td></tr>
+    <tr><td>3</td><td>Ltd Company incorporated at Companies House</td><td>Gareth</td><td>Week 1–2</td></tr>
+    <tr><td>4</td><td>Business bank account opened (Tide or Starling Business)</td><td>Gareth</td><td>Week 2</td></tr>
+    <tr><td>5</td><td>£15,000 working capital portion transferred to company</td><td>Investor</td><td>Week 2</td></tr>
+    <tr><td>6</td><td>Specialist Ltd co BTL mortgage broker briefed</td><td>Gareth</td><td>Week 2</td></tr>
+    <tr><td>7</td><td>Property accountant engaged for company setup &amp; tax</td><td>Gareth</td><td>Week 2</td></tr>
+    <tr><td>8</td><td>Auction catalogues monitored — shortlist begins</td><td>Gareth</td><td>Ongoing</td></tr>
+    <tr><td>9</td><td>Property surveyed, 160% Rule assessment run, bid limit set</td><td>Gareth</td><td>Before every auction</td></tr>
+    <tr><td>10</td><td>£75,000 acquisition capital transferred to company</td><td>Investor</td><td>Before first auction</td></tr>
+    <tr><td>11</td><td>First property acquired — refurbishment begins</td><td>Gareth</td><td>Month 2–3</td></tr>
+    <tr><td>12</td><td>Refurb complete, RICS valuation, BTL mortgage submitted</td><td>Gareth + Broker</td><td>Month 4–5</td></tr>
+    <tr><td>13</td><td>Investor capital returned from mortgage drawdown</td><td>Company</td><td>Month 5</td></tr>
+    <tr><td>14</td><td>Quarterly investor update sent</td><td>Gareth</td><td>Month 3, then quarterly</td></tr>
+  </table>
+  <div style="margin-top:20px;background:#1a3557;border-radius:10px;padding:20px 24px;text-align:center;color:#fff">
+    <div style="font-size:18px;font-weight:700;margin-bottom:4px">Gareth (Gaz) Sutton · Managing Director (proposed)</div>
+    <div style="font-size:14px;color:#90b8d0">Coniston, Cumbria · April 2026 · Private &amp; Confidential</div>
+    <div style="font-size:12px;color:#60889a;margin-top:8px">Based on a completed, verified property transaction. All projections are estimates; actual results may vary. Independent financial and legal advice recommended before committing funds.</div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+let c1=null,c2=null,c3=null;
+const £=n=>{const a=Math.round(Math.abs(n));return(n<0?'–£':'£')+a.toLocaleString()};
+const pp=n=>(+n).toFixed(1)+'%';
+const g=id=>document.getElementById(id);
+const gv=id=>+g(id).value;
+
+function oc(rent,agent,maint,voidW,ins){
+  return rent*(agent+maint)/100+rent*voidW/52+ins;
+}
+
+function setBadge(id,pass,label){
+  const el=g(id);el.textContent=label;
+  el.style.background=pass?'#dcfce7':'#fee2e2';
+  el.style.color=pass?'#166534':'#991b1b';
+}
+
+function colFor(pass,warn){
+  return pass?'#166534':warn?'#92400e':'#991b1b';
+}
+
+function recalc(){
+  const hammer=gv('sl-hammer'),reno=gv('sl-reno'),fees=gv('sl-fees'),prv=gv('sl-prv');
+  const ltv=gv('sl-ltv'),mrate=gv('sl-mrate'),iloan=gv('sl-iloan'),irate=gv('sl-irate'),defer=gv('sl-defer');
+  const rent=gv('sl-rent'),agent=gv('sl-agent'),maint=gv('sl-maint'),voidW=gv('sl-voidw'),ins=gv('sl-ins');
+  const rg=gv('sl-rg'),hpg=gv('sl-hpg'),ppy=gv('sl-ppy'),yrs=gv('sl-yrs'),tgt=gv('sl-tgt');
+
+  // Slider display labels
+  g('vl-hammer').textContent=£(hammer);g('vl-reno').textContent=£(reno);
+  g('vl-fees').textContent=£(fees);g('vl-prv').textContent=£(prv);
+  g('vl-ltv').textContent=pp(ltv);g('vl-mrate').textContent=pp(mrate);
+  g('vl-iloan').textContent=£(iloan);g('vl-irate').textContent=pp(irate);
+  g('vl-defer').textContent=defer+' mo';g('vl-rent').textContent=£(rent);
+  g('vl-agent').textContent=pp(agent);g('vl-maint').textContent=pp(maint);
+  g('vl-voidw').textContent=voidW+' wks';g('vl-ins').textContent=£(ins);
+  g('vl-rg').textContent=pp(rg);g('vl-hpg').textContent=pp(hpg);
+  g('vl-ppy').textContent=ppy<1?'1 every '+Math.round(1/ppy)+' yrs':ppy+'/yr';
+  g('vl-yrs').textContent=yrs+' yrs';g('vl-tgt').textContent=£(tgt);
+
+  // Core maths
+  const allIn=hammer+reno+fees;
+  const mortAmt=prv*ltv/100;
+  const surplus=mortAmt-allIn;
+  const ratio=prv/allIn;
+  const mm=mortAmt*mrate/100/12;
+  const ocY1=oc(rent,agent,maint,voidW,ins);
+  const netY1=rent-mm-ocY1;
+
+  // Metric cards
+  g('rm-allin').textContent=£(allIn);
+  g('rms-allin').textContent=£(hammer)+' + '+£(reno)+' + '+£(fees);
+  g('rm-ratio').textContent=pp(ratio*100);
+  g('rm-ratio').style.color=ratio>=1.6?'#166534':'#991b1b';
+  g('rms-ratio').textContent=ratio>=1.6?'passes 160% rule':'fails 160% rule';
+  g('rm-surp').textContent=(surplus>=0?'+':'')+£(surplus);
+  g('rm-surp').style.color=surplus>=0?'#166534':'#991b1b';
+  g('rms-surp').textContent='mortgage out: '+£(mortAmt);
+  g('rm-net').textContent=£(netY1);
+  g('rm-net').style.color=netY1>200?'#166534':netY1>0?'#92400e':'#991b1b';
+  g('rms-net').textContent=Math.round(mm/rent*100)+'% of rent on mortgage';
+
+  // Status badges
+  setBadge('cb-ratio',ratio>=1.6,ratio>=1.6?'160% ✓ Pass':'160% ✗ Fail');
+  setBadge('cb-brrr',surplus>=0,surplus>=0?'BRRR +'+£(surplus):'BRRR '+£(surplus));
+  setBadge('cb-cf',netY1>0,netY1>0?'CF +'+£(netY1)+'/mo':'CF '+£(netY1)+'/mo');
+
+  // Rent breakdown bar
+  const segs=[
+    {label:'Mortgage',val:Math.max(0,mm),col:'#dc2626'},
+    {label:'Agent',val:rent*agent/100,col:'#d97706'},
+    {label:'Maintenance',val:rent*maint/100,col:'#b45309'},
+    {label:'Void',val:rent*voidW/52,col:'#6b7280'},
+    {label:'Insurance',val:ins,col:'#0d9488'},
+    {label:netY1>=0?'Net profit':'Shortfall',val:Math.abs(netY1),col:netY1>=0?'#16a34a':'#9f1239'},
+  ].filter(s=>s.val>0);
+  const tot=segs.reduce((a,s)=>a+s.val,0);
+  g('rent-bar').innerHTML=segs.map(s=>{
+    const w=Math.round(s.val/tot*1000)/10;
+    return`<div title="${s.label}: ${£(s.val)}" style="width:${w}%;background:${s.col};display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;overflow:hidden;white-space:nowrap;padding:0 3px">${s.val/tot>0.1?s.label:''}</div>`;
+  }).join('');
+  g('rent-legend').innerHTML=segs.map(s=>`<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:${s.col}"></div><span style="font-size:11px;color:#64748b">${s.label}: <strong style="color:#1e293b">${£(s.val)}</strong></span></div>`).join('');
+
+  // Per-property year data
+  const lbls=Array.from({length:yrs},(_,i)=>'Yr '+(i+1));
+  const rentArr=Array.from({length:yrs},(_,i)=>Math.round(rent*Math.pow(1+rg/100,i)));
+  const mortArr=Array(yrs).fill(Math.round(mm));
+  const netArr=Array.from({length:yrs},(_,i)=>{
+    const r=rent*Math.pow(1+rg/100,i);
+    return Math.round(r-mm-oc(r,agent,maint,voidW,ins));
+  });
+  g('c1note').textContent='Yr 1: '+£(netArr[0])+'/mo → Yr '+yrs+': '+£(netArr[yrs-1])+'/mo (mortgage fixed at '+£(mm)+'/mo, rent +'+pp(rg)+'/yr)';
+
+  if(c1){c1.data.labels=lbls;c1.data.datasets[0].data=rentArr;c1.data.datasets[1].data=mortArr;c1.data.datasets[2].data=netArr;c1.update('none');}
+
+  // BRRR sensitivity table
+  const prvVals=[60000,80000,90000,100000,110000,120000,130000,150000,175000,200000];
+  g('sens-body').innerHTML=prvVals.map(pv=>{
+    const ma=pv*ltv/100,s=ma-allIn,r=pv/allIn,pass=s>=0,isCur=Math.abs(pv-prv)<5000;
+    const col=pass?'#166534':'#991b1b',bg=isCur?'background:#f0f9ff':'';
+    return`<tr style="${bg}">
+      <td class="td" style="text-align:left;font-family:inherit${isCur?';font-weight:700':''}">${£(pv)}${isCur?' ◀':''}</td>
+      <td class="td" style="text-align:center;color:${col}">${Math.round(r*100)}%</td>
+      <td class="td" style="text-align:right">${£(ma)}</td>
+      <td class="td" style="text-align:right;color:${col}">${s>=0?'+':''}${£(s)}</td>
+      <td class="td" style="text-align:center;color:${col};font-weight:700">${pass?'Pass':'Fail'}</td>
+    </tr>`;
+  }).join('');
+
+  // Portfolio computation
+  const portRows=[];
+  for(let y=1;y<=yrs;y++){
+    let totalNetMo=0,totalVal=0,totalMorts=0;
+    for(let ay=1;ay<=y;ay++){
+      const yh=y-ay,cinfl=Math.pow(1+hpg/100,ay-1);
+      const inflPrv=prv*cinfl,inflMort=inflPrv*ltv/100;
+      const inflMm=inflMort*mrate/100/12;
+      const rNow=rent*Math.pow(1+rg/100,yh);
+      const ocNow=oc(rNow,agent,maint,voidW,ins);
+      const netNow=rNow-inflMm-ocNow;
+      const frac=ay===y?0.5:1;
+      totalNetMo+=netNow*ppy*frac;
+      const vNow=inflPrv*Math.pow(1+hpg/100,yh);
+      totalVal+=vNow*ppy;totalMorts+=inflMort*ppy;
+    }
+    const invInt=y>defer/12?iloan*irate/100:0;
+    const annNet=totalNetMo*12-invInt;
+    const moDir=Math.max(0,annNet)/12;
+    portRows.push({y,props:Math.round(ppy*y),invInt:Math.round(invInt),annNet:Math.round(annNet),moDir:Math.round(moDir),equity:Math.round(totalVal-totalMorts),value:Math.round(totalVal),hit:moDir>=tgt});
+  }
+
+  const tgtYear=portRows.find(r=>r.hit);
+  setBadge('cb-tgt',!!tgtYear,tgtYear?£(tgt)+'/mo yr '+tgtYear.y:£(tgt)+'/mo not reached');
+  g('tgt-lbl').textContent='Target '+£(tgt)+'/mo'+(tgtYear?' — reached year '+tgtYear.y:' — not reached in '+yrs+' yrs');
+
+  if(c2){
+    c2.data.labels=portRows.map(r=>'Yr '+r.y);
+    c2.data.datasets[0].data=portRows.map(r=>r.moDir);
+    c2.data.datasets[0].backgroundColor=portRows.map(r=>r.hit?'#16a34a':'#2563a8');
+    c2.data.datasets[1].data=portRows.map(()=>tgt);
+    c2.update('none');
+  }
+  if(c3){
+    c3.data.labels=portRows.map(r=>'Yr '+r.y);
+    c3.data.datasets[0].data=portRows.map(r=>r.equity);
+    c3.data.datasets[1].data=portRows.map(r=>r.value);
+    c3.update('none');
+  }
+
+  // BREAK-EVEN CALCULATIONS (algebraic — no loops)
+  // Max mortgage rate where CF = 0: mm = rent - ocY1 => mortAmt*mr/100/12 = rent-ocY1 => mr = (rent-ocY1)*1200/mortAmt
+  const netBeforeMort=rent-ocY1;
+  const maxMRateVal=mortAmt>0&&netBeforeMort>0?Math.round(netBeforeMort*1200/mortAmt*10)/10:null;
+  // Min post-refurb: mortAmt >= allIn => prv*ltv/100 >= allIn => prv >= allIn*100/ltv
+  const minPRV=Math.round(allIn*100/ltv);
+  // Min rent CF=0: rent*(1-(agent+maint)/100-voidW/52) = mm+ins => rent=(mm+ins)/(1-(agent+maint)/100-voidW/52)
+  const rentMult=1-(agent+maint)/100-voidW/52;
+  const minRentCF=rentMult>0?Math.round((mm+ins)/rentMult):null;
+  // Min void weeks CF=0: rent*voidW/52 = netBeforeMort - mm => voidW = (netBeforeMort-mm)*52/rent
+  const maxVoidWks=rent>0?Math.max(0,Math.round((netBeforeMort-mm)*52/rent*10)/10):null;
+  // Min rent growth to hit target in yrs: harder to compute analytically, use portfolio data
+  const mRateMargin=maxMRateVal?maxMRateVal-mrate:null;
+  const rentBuffer=minRentCF?rent-minRentCF:null;
+  const prvBuffer=prv-minPRV;
+
+  const beRows=[
+    {label:'Post-refurb value',current:£(prv),be:£(minPRV)+' (min to return all capital)',margin:prvBuffer>=0?'+'+£(prvBuffer)+' buffer':£(prvBuffer)+' shortfall',pass:prvBuffer>=0,safe:prvBuffer>=20000},
+    {label:'Mortgage rate',current:pp(mrate),be:maxMRateVal?pp(maxMRateVal)+' (cash flow hits zero)':'Very safe (rent covers all costs)',margin:mRateMargin!=null?'+'+pp(Math.round(mRateMargin*10)/10)+' headroom':'Safe',pass:true,safe:!mRateMargin||mRateMargin>2},
+    {label:'Monthly rent',current:£(rent),be:minRentCF?£(minRentCF)+' (cash flow hits zero)':'N/A',margin:rentBuffer!=null?rentBuffer>0?'+'+£(rentBuffer)+' buffer':£(rentBuffer)+' shortfall':'N/A',pass:rentBuffer==null||rentBuffer>0,safe:rentBuffer==null||rentBuffer>200},
+    {label:'160% BRRR ratio',current:pp(ratio*100),be:'160% minimum (BRRR returns all capital)',margin:pp(Math.round((ratio-1.6)*1000)/10)+' above minimum',pass:ratio>=1.6,safe:ratio>=1.7},
+    {label:'Properties for target income',current:tgtYear?'Yr '+tgtYear.y+' ✓':'Not reached',be:£(tgt)+'/mo household income',margin:tgtYear?yrs-tgtYear.y+' yrs within window':'Increase pace or extend timeline',pass:!!tgtYear,safe:!!tgtYear&&tgtYear.y<=5},
+    {label:'Void weeks (max before CF=0)',current:voidW+' wks',be:maxVoidWks!=null?maxVoidWks+' wks maximum':'Not binding',margin:maxVoidWks!=null?Math.round((maxVoidWks-voidW)*10)/10+' wks headroom':'Safe',pass:maxVoidWks==null||maxVoidWks>voidW,safe:maxVoidWks==null||maxVoidWks-voidW>4},
+  ];
+
+  g('be-body').innerHTML=beRows.map((row,i)=>{
+    const col=row.pass?(row.safe?'#166534':'#92400e'):'#991b1b';
+    const bg=i%2===0?'':'background:#f8fafc';
+    return`<tr style="${bg}">
+      <td class="td" style="text-align:left;font-family:inherit">${row.label}</td>
+      <td class="td" style="text-align:center">${row.current}</td>
+      <td class="td" style="text-align:center;font-size:11px">${row.be}</td>
+      <td class="td" style="text-align:center;color:${col}">${row.margin}</td>
+      <td class="td" style="text-align:center;color:${col};font-weight:700">${row.pass?(row.safe?'Safe':'Marginal'):'Risk'}</td>
+    </tr>`;
+  }).join('');
+
+  // Stress test cards
+  const stColor=(v,t1,t2)=>v<t1?'#991b1b':v<t2?'#92400e':'#166534';
+  g('st-mr').textContent=maxMRateVal?pp(maxMRateVal):'>20%';
+  g('st-mr').style.color=mRateMargin!=null?stColor(mRateMargin,1.5,3):'#166534';
+  g('st-mr-s').textContent='current '+pp(mrate)+(mRateMargin!=null?' · margin: +'+pp(Math.round(mRateMargin*10)/10):' · very safe');
+  g('st-prv').textContent=£(minPRV);
+  g('st-prv').style.color=stColor(prvBuffer,10000,20000);
+  g('st-prv-s').textContent='current '+£(prv)+' · buffer: +'+£(Math.max(0,prvBuffer));
+  g('st-rent').textContent=minRentCF?£(minRentCF):'N/A';
+  g('st-rent').style.color=rentBuffer!=null?stColor(rentBuffer,100,200):'#166634';
+  g('st-rent-s').textContent=rentBuffer!=null?'current '+£(rent)+' · buffer: +'+£(Math.max(0,rentBuffer)):'Rent covers all costs';
+
+  // Portfolio table
+  g('port-body').innerHTML=portRows.map(r=>{
+    const bg=r.hit?'background:#f0fdf4':r.y%2===0?'background:#f8fafc':'';
+    const def=r.y<=defer/12;
+    const incCol=r.hit?'color:#166534;font-weight:700':r.moDir>tgt*0.7?'color:#92400e':'';
+    return`<tr style="${bg}">
+      <td class="td" style="text-align:left;font-family:inherit">${r.y}</td>
+      <td class="td" style="text-align:center">${r.props}</td>
+      <td class="td" style="text-align:right;${def?'color:#94a3b8':'color:#d97706'}">${def?'deferred':£(r.invInt)}</td>
+      <td class="td" style="text-align:right;${r.annNet>=0?'color:#166534':'color:#991b1b'}">${£(r.annNet)}</td>
+      <td class="td" style="text-align:right;${incCol}">${£(r.moDir)}${r.hit?' ✓':''}</td>
+      <td class="td" style="text-align:right">${£(r.equity)}</td>
+    </tr>`;
+  }).join('');
+}
+
+function initCharts(){
+  const commonOpts={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},animation:false};
+  c1=new Chart(g('cc1'),{type:'line',data:{labels:[],datasets:[
+    {label:'Monthly rent',data:[],borderColor:'#2563a8',backgroundColor:'#2563a822',fill:true,tension:0.3,pointRadius:2,borderDash:[5,3],borderWidth:1.5},
+    {label:'Mortgage',data:[],borderColor:'#dc2626',borderDash:[8,4],fill:false,pointRadius:0,borderWidth:2},
+    {label:'Net profit',data:[],borderColor:'#16a34a',backgroundColor:'#16a34a22',fill:true,tension:0.3,pointRadius:4,borderWidth:2.5},
+  ]},options:{...commonOpts,scales:{
+    x:{ticks:{font:{size:11}}},
+    y:{ticks:{font:{size:11},callback:v=>'£'+Math.round(v)},title:{display:true,text:'£/month',font:{size:11}}}
+  }}});
+
+  c2=new Chart(g('cc2'),{data:{labels:[],datasets:[
+    {type:'bar',label:'Monthly household income',data:[],backgroundColor:'#2563a8',borderRadius:4},
+    {type:'line',label:'Target',data:[],borderColor:'#d97706',borderDash:[6,3],pointRadius:0,borderWidth:2,fill:false},
+  ]},options:{...commonOpts,scales:{
+    x:{ticks:{font:{size:11}}},
+    y:{ticks:{font:{size:11},callback:v=>'£'+Math.round(v)},title:{display:true,text:'£/month',font:{size:11}}}
+  }}});
+
+  c3=new Chart(g('cc3'),{type:'line',data:{labels:[],datasets:[
+    {label:'Portfolio equity',data:[],borderColor:'#1a3557',backgroundColor:'#1a355722',fill:true,tension:0.3,pointRadius:3,borderWidth:2.5},
+    {label:'Total value',data:[],borderColor:'#0d9488',borderDash:[4,3],fill:false,tension:0.3,pointRadius:0,borderWidth:1.5},
+  ]},options:{...commonOpts,scales:{
+    x:{ticks:{font:{size:11}}},
+    y:{ticks:{font:{size:11},callback:v=>v>=1000000?'£'+(v/1000000).toFixed(1)+'m':'£'+Math.round(v/1000)+'k'}}
+  }}});
+
+  recalc();
+}
+
+// Attach event listeners immediately
+['sl-hammer','sl-reno','sl-fees','sl-prv','sl-ltv','sl-mrate','sl-iloan','sl-irate','sl-defer',
+ 'sl-rent','sl-agent','sl-maint','sl-voidw','sl-ins','sl-rg','sl-hpg','sl-ppy','sl-yrs','sl-tgt'
+].forEach(id=>{g(id).addEventListener('input',recalc);});
+
+// Initial DOM update (before Chart.js may be ready)
+recalc();
+
+// Poll for Chart.js then initialise charts
+(function tryInit(){
+  if(typeof Chart!=='undefined'){initCharts();}
+  else{setTimeout(tryInit,80);}
+})();
+</script>
+</body>
+</html>
