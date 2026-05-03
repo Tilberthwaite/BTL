@@ -7,357 +7,497 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,sans-serif;background:#eef2f7;color:#1e293b;font-size:14px;line-height:1.6}
-.wrap{max-width:1200px;margin:0 auto;padding:28px 20px}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 18px}
 p{margin-bottom:10px;color:#334155}
-.cover{background:#1a3557;color:#fff;border-radius:12px;padding:40px 44px;margin-bottom:18px}
-.cover h1{font-size:30px;font-weight:700;color:#fff;margin-bottom:5px}
-.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0 0}
-.cst{background:rgba(255,255,255,.1);border-radius:8px;padding:12px;text-align:center}
-.cl{font-size:10px;color:#90b8d0;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
-.cv{font-size:20px;font-weight:700;color:#fff;font-family:'Courier New',monospace}
-.cs{font-size:11px;color:#6a9fc0;margin-top:2px}
-.sec{background:#fff;border-radius:10px;padding:24px 28px;margin-bottom:16px;border:1px solid #dde6f0}
-.st{font-size:17px;font-weight:700;color:#1a3557;margin-bottom:12px;padding-bottom:9px;border-bottom:3px solid #2563a8}
-.ss{font-size:13px;font-weight:700;color:#2563a8;margin:14px 0 7px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
-.sc{border:1px solid #dde6f0;border-radius:10px;overflow:hidden}
-.sch{padding:13px 15px}
-.scb{padding:13px 15px;background:#fff;border-top:1px solid #e2e8f0}
-.sm2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:9px}
-.sm{background:#f8fafc;border-radius:6px;padding:8px 10px}
-.sml{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
-.smv{font-size:13px;font-weight:700;font-family:'Courier New',monospace;color:#1e293b}
-table.dt{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
-table.dt th{font-size:11px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.06em;padding:6px 9px;border-bottom:2px solid #e2e8f0;background:#f8fafc;white-space:nowrap}
+.cover{background:#1a3557;border-radius:12px;padding:38px 42px;margin-bottom:16px}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:18px 0 0}
+.cst{background:rgba(255,255,255,.1);border-radius:8px;padding:11px;text-align:center}
+.cl{font-size:10px;color:#90b8d0;text-transform:uppercase;letter-spacing:.07em;margin-bottom:2px}
+.cv{font-size:19px;font-weight:700;color:#fff;font-family:'Courier New',monospace}
+.cs{font-size:10px;color:#6a9fc0;margin-top:2px}
+.sec{background:#fff;border-radius:10px;padding:22px 26px;margin-bottom:14px;border:1px solid #dde6f0}
+.st{font-size:16px;font-weight:700;color:#1a3557;margin-bottom:11px;padding-bottom:8px;border-bottom:3px solid #2563a8}
+.ss{font-size:13px;font-weight:700;color:#2563a8;margin:13px 0 6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:11px 0}
+table.dt{width:100%;border-collapse:collapse;font-size:13px;margin:7px 0}
+table.dt th{font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.05em;padding:5px 8px;border-bottom:2px solid #e2e8f0;background:#f8fafc;white-space:nowrap}
 table.dt th.r{text-align:right}
-table.dt td{padding:6px 9px;border-bottom:1px solid #f1f5f9;font-size:13px}
-table.dt td.r{text-align:right;font-family:'Courier New',monospace}
+table.dt td{padding:6px 8px;border-bottom:1px solid #f1f5f9;font-size:13px}
+table.dt td.r{text-align:right;font-family:'Courier New',monospace;font-size:12px}
 table.dt tr:nth-child(even){background:#fafbff}
 table.dt tr.hit{background:#f0fdf4}
-table.dt tr.sep td{border-top:2px solid #e2e8f0;font-weight:700;background:#f8fafc}
-.ib{border-radius:8px;padding:12px 15px;margin:10px 0}
+table.dt tr.warn{background:#fffbeb}
+table.dt tr.danger{background:#fff1f2}
+table.dt tr.sep td{border-top:2px solid #1a3557;font-weight:700;background:#f0f4f8}
+.ib{border-radius:8px;padding:11px 14px;margin:9px 0}
 .ib.a{background:#fffbeb;border-left:4px solid #d97706}
 .ib.g{background:#f0fdf4;border-left:4px solid #16a34a}
 .ib.r{background:#fff1f2;border-left:4px solid #e11d48}
+.ib.b{background:#eff6ff;border-left:4px solid #2563a8}
 .ib p{margin:0;font-size:13px}
-.bd{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:700}
+.bd{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700}
 .bd.g{background:#dcfce7;color:#166534}
 .bd.a{background:#fef3c7;color:#92400e}
-.br{display:grid;grid-template-columns:52px 1fr 200px;gap:8px;align-items:center;margin-bottom:5px}
+.bd.r{background:#fee2e2;color:#991b1b}
+/* Cashflow waterfall */
+.wf{border-radius:8px;overflow:hidden;border:1px solid #dde6f0}
+.wf-row{display:flex;align-items:center;border-bottom:1px solid #f1f5f9;min-height:42px}
+.wf-row:last-child{border-bottom:none}
+.wf-label{padding:7px 12px;font-size:13px;flex:1}
+.wf-note{padding:7px 10px;font-size:11px;color:#64748b;width:190px;flex-shrink:0}
+.wf-val{padding:7px 12px;font-family:'Courier New',monospace;font-size:14px;font-weight:700;width:80px;text-align:right;flex-shrink:0}
+/* Income bars */
+.br{display:grid;grid-template-columns:64px 1fr 240px;gap:7px;align-items:center;margin-bottom:4px}
 .by{font-size:11px;color:#64748b;text-align:right}
-.bw{position:relative;height:20px;background:#e2e8f0;border-radius:3px}
+.bw{position:relative;height:22px;background:#e2e8f0;border-radius:3px;overflow:hidden}
 .bf{position:absolute;left:0;top:0;height:100%;border-radius:3px}
-.bm{position:absolute;top:-3px;width:2px;height:26px;background:#dc2626;opacity:.75}
+.bs{position:absolute;top:0;height:100%;opacity:.4}
+.bm{position:absolute;top:-2px;width:2px;height:26px;background:#dc2626;opacity:.8}
 .bv{font-size:11px;font-family:'Courier New',monospace;color:#475569}
 .hi{color:#166534;font-weight:700}
 .lo{color:#991b1b}
-.leg{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;font-size:12px;color:#475569}
-.leg span{display:flex;align-items:center;gap:4px}
+.am{color:#92400e}
+/* Fee block */
+.fee-block{border:1px solid #dde6f0;border-radius:8px;overflow:hidden;margin-bottom:10px}
+.fee-head{background:#1a3557;color:#fff;padding:7px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.fee-row{display:flex;justify-content:space-between;align-items:flex-start;padding:7px 12px;border-bottom:1px solid #f1f5f9;gap:8px}
+.fee-row:last-child{border-bottom:none}
+.fee-row:nth-child(even){background:#fafbff}
+.fee-row.sub{background:#eef2f7;font-weight:700;border-top:1px solid #e2e8f0}
+.fee-row.total{background:#1a3557;color:#fff;font-weight:700;font-size:14px}
+.fn{font-size:13px;flex:1}
+.fn small{display:block;font-size:11px;color:#94a3b8;margin-top:2px}
+.fv{font-family:'Courier New',monospace;font-weight:700;flex-shrink:0;font-size:13px}
+.fee-row.total .fn,.fee-row.total .fv{color:#fff}
+/* Timeline */
+.tl{padding-left:20px}
+.tl-i{position:relative;margin-bottom:12px}
+.tl-i:before{content:'';position:absolute;left:-14px;top:5px;width:8px;height:8px;border-radius:50%;background:#2563a8}
+.tl-i:after{content:'';position:absolute;left:-11px;top:13px;width:2px;height:calc(100% + 4px);background:#dde6f0}
+.tl-i:last-child:after{display:none}
+.tl-h{font-size:12px;font-weight:700;color:#1a3557;margin-bottom:2px}
+.tl-b{font-size:12px;color:#475569}
+.mn{font-family:'Courier New',monospace;font-weight:700}
+/* Two-value comparison */
+.cv2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#dde6f0;border-radius:8px;overflow:hidden;margin:8px 0}
+.cv2-cell{background:#fff;padding:10px 13px;text-align:center}
+.cv2-head{background:#1a3557;padding:7px 13px;text-align:center}
+.cv2-head span{color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em}
 @media print{body{background:#fff}.sec{break-inside:avoid}}
-@media(max-width:860px){.three,.two,.cg{grid-template-columns:1fr}}
+@media(max-width:860px){.two,.three,.cg{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+<!-- COVER -->
 <div class="cover">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
     <div>
-      <h1>Property Investment Business Plan</h1>
-      <div style="font-size:16px;color:#7fb3d8;margin-bottom:4px">Buy-to-Let Portfolio &middot; Private Limited Company &middot; BRRR Strategy</div>
-      <div style="font-size:14px;color:#7fb3d8;font-weight:700">Barrow-in-Furness, Cumbria</div>
-      <div style="font-size:12px;color:#90b8d0;margin-top:6px">Prepared by Gareth (Gaz) Sutton &middot; April 2026 &middot; Private &amp; Confidential</div>
+      <div style="font-size:27px;font-weight:700;color:#fff;margin-bottom:3px">Property Investment Business Plan</div>
+      <div style="font-size:14px;color:#7fb3d8;margin-bottom:3px">Buy-to-Let Portfolio &middot; BRRR Strategy &middot; Barrow-in-Furness &middot; Private Limited Company</div>
+      <div style="font-size:11px;color:#90b8d0">Gareth (Gaz) Sutton &middot; April 2026 &middot; Private &amp; Confidential</div>
+      <div style="margin-top:7px;display:flex;gap:5px;flex-wrap:wrap">
+        <span style="background:rgba(22,163,74,.2);border:1px solid rgba(22,163,74,.35);border-radius:5px;padding:3px 9px;font-size:11px;color:#6ee7b7;font-weight:700">&#10003; 12,246 transactions verified (2015&ndash;2026)</span>
+        <span style="background:rgba(22,163,74,.2);border:1px solid rgba(22,163,74,.35);border-radius:5px;padding:3px 9px;font-size:11px;color:#6ee7b7;font-weight:700">&#10003; All fees included</span>
+        <span style="background:rgba(22,163,74,.2);border:1px solid rgba(22,163,74,.35);border-radius:5px;padding:3px 9px;font-size:11px;color:#6ee7b7;font-weight:700">&#10003; Self-managed</span>
+        <span style="background:rgba(22,163,74,.2);border:1px solid rgba(22,163,74,.35);border-radius:5px;padding:3px 9px;font-size:11px;color:#6ee7b7;font-weight:700">&#10003; Surveyor risk modelled</span>
+      </div>
     </div>
     <div style="text-align:right">
-      <div style="font-size:11px;color:#6a9fc0;text-transform:uppercase;letter-spacing:.1em">Investment sought</div>
-      <div style="font-size:34px;font-weight:700;color:#fff;font-family:'Courier New',monospace">&pound;100,000</div>
-      <div style="font-size:13px;color:#7fb3d8">Director&rsquo;s Loan &middot; 4% p.a. &middot; 24 months deferred</div>
+      <div style="font-size:10px;color:#6a9fc0;text-transform:uppercase;letter-spacing:.09em">Family loan &mdash; no repayment schedule</div>
+      <div style="font-size:32px;font-weight:700;color:#fff;font-family:'Courier New',monospace">&pound;100,000</div>
+      <div style="font-size:12px;color:#7fb3d8">4% p.a. accruing &middot; repaid when income allows</div>
     </div>
   </div>
   <div class="cg">
-    <div class="cst"><div class="cl">Already done once</div><div class="cv">1 live</div><div class="cs">verified, rented property</div></div>
-    <div class="cst"><div class="cl">Post-refurb value</div><div class="cv">&pound;130k+</div><div class="cs">real completed deal</div></div>
-    <div class="cst"><div class="cl">BRRR surplus/property</div><div class="cv">&pound;22,500</div><div class="cs">capital recycled + surplus</div></div>
-    <div class="cst"><div class="cl">&pound;2k/mo income target</div><div class="cv">Year 5</div><div class="cs">beats inflation-adj. target</div></div>
+    <div class="cst"><div class="cl">All-in cost (all fees)</div><div class="cv">&pound;84,102</div><div class="cs">verified from data</div></div>
+    <div class="cst"><div class="cl">Conservative post-refurb</div><div class="cv">&pound;130,000</div><div class="cs">Gareth&rsquo;s verified deal</div></div>
+    <div class="cst"><div class="cl">Net cashflow year 1</div><div class="cv">&pound;306/mo</div><div class="cs">self-managed, all costs</div></div>
+    <div class="cst"><div class="cl">&pound;2,000/mo from rental</div><div class="cv">Year 6</div><div class="cs">1.5 props/yr average</div></div>
   </div>
 </div>
 
+<!-- DATA FOUNDATION & HONEST LIMITATIONS -->
 <div class="sec">
-  <div class="st">Proof of concept &mdash; already done once</div>
+  <div class="st">What the sold price data actually shows &mdash; and what it doesn&rsquo;t</div>
+  <p>12,246 Barrow-in-Furness sold price transactions from 2015 to 2026 underpin this plan. Before using the data, it&rsquo;s important to state one honest limitation clearly: <strong>the dataset has no bedroom count</strong>. We cannot directly filter for 4-bed properties. Everything below is based on price bands and sq ft proxies where available, with Gareth&rsquo;s own completed deal as the primary verification.</p>
+
+  <div class="two" style="margin-top:14px">
+    <div>
+      <div class="ss" style="margin-top:0">What the data confirms with confidence</div>
+      <table class="dt">
+        <tr><th>Finding</th><th class="r">Evidence</th></tr>
+        <tr><td>Distressed terraced buying floor (10yr median)</td><td class="r">&pound;52,000 &mdash; 1,243 sales</td></tr>
+        <tr><td>Buying floor stability over 10 years</td><td class="r">Barely moved 2015&ndash;2025</td></tr>
+        <tr><td>Terraced sales above £130k (10yr)</td><td class="r">1,547 sales &mdash; 155/year</td></tr>
+        <tr><td>Terraced sales above £120k (2024&ndash;26 median)</td><td class="r">&pound;150,000 &mdash; 504 sales</td></tr>
+        <tr><td>Streets with both cheap AND expensive sales</td><td class="r">80 streets confirmed</td></tr>
+        <tr><td>Gareth&rsquo;s deal (4-bed, £50k→£130k)</td><td class="r">Verified. Real. Not theoretical.</td></tr>
+        <tr><td>900&ndash;1,300 sq ft sales in £130k&ndash;£160k band</td><td class="r">67 sales, median £137,500</td></tr>
+        <tr><td>W&amp;F rent growth (ONS Dec 2025)</td><td class="r">+7.1% in 12 months</td></tr>
+      </table>
+      <div class="ib b" style="margin-top:8px"><p><strong>The sq ft data matters:</strong> 460 properties have recorded floor areas. Of the 4-bed proxies (900&ndash;1,300 sq ft), those selling in the £130k&ndash;£160k band have a median of <strong>&pound;137,500</strong>. This supports £130k&ndash;£140k as a realistic post-refurb range for refurbished 4-beds &mdash; but only on suitable streets.</p></div>
+    </div>
+    <div>
+      <div class="ss" style="margin-top:0">What the data cannot confirm</div>
+      <div class="ib a" style="margin-top:0"><p><strong>No bedroom count in dataset.</strong> The £100k&ndash;£180k terraced band includes both 3-bed and 4-bed properties. Some of those 1,547 sales above £130k will be well-presented 3-beds, not 4-beds. We cannot separate them without inspecting individual addresses.</p></div>
+      <div class="ib a" style="margin-top:8px"><p><strong>Street matters enormously.</strong> Averages hide huge variation. Oxford Street terraced averages £154k recently. Some other streets cap out at £90k&ndash;£110k regardless of condition. A property on the wrong street will not achieve the planning figure however good the refurb is.</p></div>
+
+      <div class="ss">Street-level data: best-evidenced streets for post-refurb value</div>
+      <table class="dt">
+        <tr><th>Street</th><th class="r">High-end avg</th><th class="r">Recent sales</th><th class="r">Evidenced?</th></tr>
+        <tr><td>Oxford Street</td><td class="r">&pound;154,000+</td><td class="r">£170k, £175k, £180k (2026)</td><td class="r"><span class="bd g">Strong</span></td></tr>
+        <tr><td>Cheltenham Street</td><td class="r">&pound;168,000</td><td class="r">36 sales over £120k</td><td class="r"><span class="bd g">Strong</span></td></tr>
+        <tr><td>Ainslie Street</td><td class="r">&pound;146,000</td><td class="r">£153k, £150k, £160k (2025&ndash;26)</td><td class="r"><span class="bd g">Strong</span></td></tr>
+        <tr><td>Hartington Street</td><td class="r">&pound;149,000</td><td class="r">34 sales over £120k</td><td class="r"><span class="bd g">Strong</span></td></tr>
+        <tr><td>School Street</td><td class="r">&pound;162,000</td><td class="r">9 sales over £120k</td><td class="r"><span class="bd a">Moderate</span></td></tr>
+        <tr><td>Ramsden Street</td><td class="r">&pound;143,000</td><td class="r">9 sales over £120k</td><td class="r"><span class="bd a">Moderate</span></td></tr>
+      </table>
+      <div class="ib g" style="margin-top:8px"><p><strong>The process for every deal:</strong> Before bidding on any property, look up that specific street in the sold price data. If refurbished properties on that street aren&rsquo;t selling at £130k+, the planning figure doesn&rsquo;t apply &mdash; walk away regardless of how cheap the hammer is.</p></div>
+    </div>
+  </div>
+
+  <div class="ss" style="margin-top:8px">Planning figures used in this plan</div>
+  <div class="cv2">
+    <div class="cv2-head"><span>Conservative (planning baseline)</span></div>
+    <div class="cv2-head"><span>Target (good street, quality finish)</span></div>
+    <div class="cv2-cell">
+      <div style="font-size:24px;font-weight:700;color:#1a3557;font-family:'Courier New',monospace">&pound;130,000</div>
+      <div style="font-size:11px;color:#64748b;margin-top:3px">Gareth&rsquo;s verified deal. Consistent with 10yr data. Use this when evidence is limited.</div>
+    </div>
+    <div class="cv2-cell">
+      <div style="font-size:24px;font-weight:700;color:#166534;font-family:'Courier New',monospace">&pound;140,000</div>
+      <div style="font-size:11px;color:#64748b;margin-top:3px">Achievable on Oxford St, Cheltenham St, Ainslie St etc. Requires specific comparable evidence before bidding.</div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPLETE FEE BREAKDOWN -->
+<div class="sec">
+  <div class="st">Complete cost breakdown &mdash; every fee for a Ltd company auction purchase</div>
   <div class="two">
     <div>
-      <p>Not theoretical. Gareth Sutton has already completed this exact strategy. These figures are from his existing buy-to-let property in Barrow-in-Furness.</p>
+      <div class="fee-block">
+        <div class="fee-head">Stage 1 &mdash; Buying at auction</div>
+        <div class="fee-row"><div class="fn">Hammer price (10yr data median)<small>Actual bid accepted. Guides are typically 20%+ below this.</small></div><div class="fv">&pound;52,000</div></div>
+        <div class="fee-row"><div class="fn">Buyer&rsquo;s premium (~3% of hammer + 20% VAT)<small>Varies by auction house &mdash; always check before attending. Cannot be negotiated.</small></div><div class="fv">&pound;1,872</div></div>
+        <div class="fee-row"><div class="fn">Auction admin/reservation fee<small>Many auctions (SDL, BidX1) charge this separately from the buyer&rsquo;s premium. Typically &pound;750&ndash;&pound;1,500+VAT. Check terms for each specific auction.</small></div><div class="fv">&pound;1,000</div></div>
+        <div class="fee-row"><div class="fn">Stamp Duty Land Tax — SDLT (5% Ltd co surcharge)<small>No nil-rate band for Ltd companies. No first-time buyer relief. No multiple dwellings relief (abolished Jun 2024). Increased from 3% to 5% in Oct 2024. On &pound;52,000: 5% &times; &pound;52,000 = &pound;2,600.</small></div><div class="fv">&pound;2,600</div></div>
+        <div class="fee-row"><div class="fn">Conveyancing/solicitor (inc VAT)<small>Auction purchases require solicitor instructed before auction day to review legal pack. Higher cost than standard purchase.</small></div><div class="fv">&pound;1,920</div></div>
+        <div class="fee-row"><div class="fn">Land Registry fee<small>Electronic submission. &pound;40,001&ndash;&pound;80,000 = &pound;270.</small></div><div class="fv">&pound;270</div></div>
+        <div class="fee-row"><div class="fn">Searches (local authority, drainage, environmental)<small>Required by mortgage lender for remortgage application.</small></div><div class="fv">&pound;400</div></div>
+        <div class="fee-row"><div class="fn">Pre-auction building survey<small>Non-negotiable for distressed auction property. Sold as-seen, no recourse. Level 2 survey before bidding is the only protection against structural surprises that blow the refurb budget.</small></div><div class="fv">&pound;700</div></div>
+        <div class="fee-row sub"><div class="fn">Subtotal &mdash; acquiring the property</div><div class="fv">&pound;60,762</div></div>
+      </div>
+      <div class="fee-block">
+        <div class="fee-head">Stage 2 &mdash; Refurbishment</div>
+        <div class="fee-row"><div class="fn">Full refurbishment (kitchen, bathroom, boiler, decoration, flooring, EPC works)</div><div class="fv">&pound;20,000</div></div>
+        <div class="fee-row"><div class="fn">Contingency (10%)<small>Hidden damp, rewiring, structural movement. Must be treated as spent, not aspirational.</small></div><div class="fv">&pound;2,000</div></div>
+        <div class="fee-row sub"><div class="fn">Subtotal &mdash; refurbishment</div><div class="fv">&pound;22,000</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="fee-block">
+        <div class="fee-head">Stage 3 &mdash; BRRR refinance</div>
+        <div class="fee-row"><div class="fn">RICS independent valuation<small>Mandatory for all BTL mortgage applications. Cannot use estate agent estimate or Rightmove. Budget &pound;450&ndash;&pound;600.</small></div><div class="fv">&pound;500</div></div>
+        <div class="fee-row"><div class="fn">Mortgage broker fee<small>Specialist Ltd co BTL broker essential. Budget &pound;750&ndash;&pound;1,000.</small></div><div class="fv">&pound;750</div></div>
+        <div class="fee-row"><div class="fn">Mortgage arrangement fee (added to loan)<small>~1.5% of loan. On &pound;97,500: &pound;1,462. Added to mortgage, increases monthly payment by ~&pound;6/mo.</small></div><div class="fv">&pound;1,462*</div></div>
+        <div class="fee-row"><div class="fn">EPC certificate (required before letting)<small>Must be D or above for new tenancies (MEES regulations).</small></div><div class="fv">&pound;90</div></div>
+        <div class="fee-row sub"><div class="fn">Subtotal &mdash; refinancing</div><div class="fv">&pound;1,340</div></div>
+      </div>
+      <div class="fee-block">
+        <div class="fee-head">Annual ongoing compliance (per property)</div>
+        <div class="fee-row"><div class="fn">Gas safety certificate (annual, mandatory)</div><div class="fv">&pound;70/yr</div></div>
+        <div class="fee-row"><div class="fn">EICR electrical report (every 5 years)</div><div class="fv">&pound;200/5yr</div></div>
+        <div class="fee-row"><div class="fn">EPC renewal (every 10 years)</div><div class="fv">&pound;90/10yr</div></div>
+        <div class="fee-row"><div class="fn">Smoke/CO alarm checks, misc</div><div class="fv">~&pound;30/yr</div></div>
+        <div class="fee-row sub"><div class="fn">Monthly equivalent</div><div class="fv">~&pound;14/mo</div></div>
+      </div>
+      <div class="fee-block">
+        <div class="fee-head">Company-level costs (per property share)</div>
+        <div class="fee-row"><div class="fn">Accountant (accounts, CT return, advice) &mdash; &pound;1,000/yr &divide; 6 props</div><div class="fv">&pound;14/mo</div></div>
+        <div class="fee-row"><div class="fn">NRLA membership (templates, guidance, helpline)</div><div class="fv">&pound;100/yr</div></div>
+        <div class="fee-row"><div class="fn">Tenant advertising (OpenRent ~&pound;50/let, 18mo avg)</div><div class="fv">&pound;5/mo</div></div>
+      </div>
+      <div class="fee-block">
+        <div class="fee-head" style="background:#0f3460">Grand total &mdash; all-in per property</div>
+        <div class="fee-row total"><div class="fn">Total (arrangement fee added to mortgage)<small>Cash that must leave company to complete and refurbish one property</small></div><div class="fv">&pound;84,102</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BRRR ANALYSIS — TWO SCENARIOS -->
+<div class="sec">
+  <div class="st">BRRR analysis &mdash; conservative and target scenarios</div>
+  <p style="margin-bottom:12px">The minimum ratio needed to return <em>all</em> invested capital is <strong>133.3%</strong> &mdash; this is when the 75% LTV mortgage exactly equals the all-in cost. The 160% rule used in earlier versions of this plan required a surplus above that &mdash; useful when each deal must self-fund the next, but less critical with a flexible loan in place.</p>
+
+  <div class="two">
+    <div>
+      <div class="ss" style="margin-top:0">Conservative scenario &mdash; &pound;130,000 post-refurb</div>
+      <div style="background:#eff6ff;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="font-size:11px;color:#185FA5;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px">Gareth&rsquo;s verified deal &mdash; use when evidence is limited</div>
+        <table class="dt" style="margin:0">
+          <tr><td>All-in cost</td><td class="r"><strong>&pound;84,102</strong></td></tr>
+          <tr><td>Post-refurb value</td><td class="r"><strong>&pound;130,000</strong></td></tr>
+          <tr><td>BRRR ratio</td><td class="r" style="color:#92400e;font-weight:700">154.6% &mdash; passes 133.3% min</td></tr>
+          <tr><td>Mortgage (75% LTV)</td><td class="r">&pound;97,500</td></tr>
+          <tr><td>Surplus returned</td><td class="r" style="color:#166534;font-weight:700">+&pound;13,398</td></tr>
+          <tr><td>Monthly mortgage (5.25% IO)</td><td class="r">&pound;427/mo</td></tr>
+          <tr><td>Net cashflow &mdash; year 1</td><td class="r" style="color:#166534;font-weight:700">&pound;306/mo</td></tr>
+          <tr><td>Max hammer (at this PRV, 133.3%)</td><td class="r">&pound;64,148 theoretical</td></tr>
+          <tr><td>Practical max hammer (surveyor buffer)</td><td class="r">&pound;48,000&ndash;52,000</td></tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="ss" style="margin-top:0">Target scenario &mdash; &pound;140,000 post-refurb (good street)</div>
+      <div style="background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="font-size:11px;color:#166534;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px">Oxford St, Cheltenham St, Ainslie St &mdash; requires comparable evidence</div>
+        <table class="dt" style="margin:0">
+          <tr><td>All-in cost</td><td class="r"><strong>&pound;84,102</strong></td></tr>
+          <tr><td>Post-refurb value</td><td class="r"><strong>&pound;140,000</strong></td></tr>
+          <tr><td>BRRR ratio</td><td class="r" style="color:#166534;font-weight:700">166.5% &mdash; strong pass</td></tr>
+          <tr><td>Mortgage (75% LTV)</td><td class="r">&pound;105,000</td></tr>
+          <tr><td>Surplus returned</td><td class="r" style="color:#166534;font-weight:700">+&pound;20,898</td></tr>
+          <tr><td>Monthly mortgage (5.25% IO)</td><td class="r">&pound;459/mo</td></tr>
+          <tr><td>Net cashflow &mdash; year 1</td><td class="r" style="color:#166534;font-weight:700">&pound;273/mo</td></tr>
+          <tr><td>Max hammer (at this PRV, 133.3%)</td><td class="r">&pound;71,148 theoretical</td></tr>
+          <tr><td>Practical max hammer (surveyor buffer)</td><td class="r">&pound;55,000&ndash;62,000</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="ib b"><p><strong>Note on cashflow:</strong> The target scenario (&pound;140k) has <em>lower</em> monthly cashflow (£273) than the conservative (&pound;306) because the higher mortgage costs more per month. But it returns a larger BRRR surplus (&pound;20,898 vs &pound;13,398). Higher post-refurb value is better for capital recycling, slightly worse for monthly income. Both are good outcomes.</p></div>
+
+  <div class="ss" style="margin-top:14px">Hammer/refurb combinations that work &mdash; at conservative &pound;130k post-refurb</div>
+  <div style="overflow-x:auto">
+    <table class="dt" style="min-width:600px">
+      <tr><th>Hammer</th><th class="r">Refurb (inc contingency)</th><th class="r">All-in total</th><th class="r">Mortgage out</th><th class="r">Surplus</th><th class="r">Verdict</th></tr>
+      <tr class="hit"><td>&pound;45,000 (below median)</td><td class="r">&pound;27,500</td><td class="r">&pound;82,180</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;15,320</td><td class="r"><span class="bd g">Strong</span></td></tr>
+      <tr class="hit"><td>&pound;50,000 (Gaz&rsquo;s deal)</td><td class="r">&pound;22,000</td><td class="r">&pound;83,930</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;13,570</td><td class="r"><span class="bd g">Pass</span></td></tr>
+      <tr class="hit"><td>&pound;52,000 (data median)</td><td class="r">&pound;20,000</td><td class="r">&pound;84,102</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;13,398</td><td class="r"><span class="bd g">Pass</span></td></tr>
+      <tr class="hit"><td>&pound;60,000 (better condition)</td><td class="r">&pound;11,000</td><td class="r">&pound;82,790</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;14,710</td><td class="r"><span class="bd g">Pass</span></td></tr>
+      <tr class="hit"><td>&pound;60,000</td><td class="r">&pound;8,800 (cosmetic only)</td><td class="r">&pound;80,590</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;16,910</td><td class="r"><span class="bd g">Strong</span></td></tr>
+      <tr class="warn"><td>&pound;65,000</td><td class="r">&pound;6,600 (paint &amp; carpet)</td><td class="r">&pound;83,780</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;13,720</td><td class="r"><span class="bd g">Pass</span></td></tr>
+      <tr class="danger"><td>&pound;70,000</td><td class="r">&pound;3,300 (almost nothing)</td><td class="r">&pound;85,480</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;12,020</td><td class="r"><span class="bd g">Pass</span></td></tr>
+      <tr class="danger"><td>&pound;75,000</td><td class="r">&pound;0 (already done)</td><td class="r">&pound;87,080</td><td class="r">&pound;97,500</td><td class="r" style="color:#92400e">+&pound;10,420</td><td class="r"><span class="bd a">Marginal</span></td></tr>
+    </table>
+  </div>
+  <p style="font-size:11px;color:#64748b;margin-top:5px">The total all-in is what matters &mdash; not how it splits between hammer and refurb. A &pound;60k property needing only &pound;8k of work can be better than a &pound;52k property needing &pound;20k. At &pound;130k post-refurb, virtually any combination under &pound;100k all-in works. The practical constraint is hammer price discipline, not refurb budget.</p>
+</div>
+
+<!-- SURVEYOR RISK -->
+<div class="sec">
+  <div class="st">Surveyor risk &mdash; when the lender&rsquo;s valuer comes in low</div>
+  <p style="margin-bottom:12px">Lenders send their own RICS surveyors whose job is conservative valuation &mdash; they must be able to justify lending against what the property could recover in a forced sale. They commonly value 8&ndash;15% below market value. This affects how much capital the BRRR returns, but has a counterintuitive effect on cashflow.</p>
+
+  <div class="two">
+    <div>
+      <div class="ss" style="margin-top:0">Impact at conservative post-refurb (£130,000)</div>
       <table class="dt">
-        <tr><td>Auction hammer price</td><td class="r"><strong>&pound;50,000</strong></td></tr>
-        <tr><td>Refurbishment (full)</td><td class="r">&pound;20,000</td></tr>
-        <tr><td>SDLT, legal, survey</td><td class="r">~&pound;5,000</td></tr>
-        <tr><td>Total all-in cost</td><td class="r"><strong>~&pound;75,000</strong></td></tr>
-        <tr><td>Post-refurbishment value</td><td class="r"><strong style="color:#166534">&pound;130,000+</strong></td></tr>
-        <tr><td>Equity created from one deal</td><td class="r"><strong style="color:#166534">~&pound;55,000</strong></td></tr>
+        <tr><th>Surveyor values at</th><th class="r">Mortgage (75%)</th><th class="r">vs all-in</th><th class="r">Net CF/mo</th><th class="r">Result</th></tr>
+        <tr class="hit"><td>100% &mdash; &pound;130,000</td><td class="r">&pound;97,500</td><td class="r" style="color:#166534">+&pound;13,398</td><td class="r">&pound;306</td><td class="r"><span class="bd g">All back</span></td></tr>
+        <tr class="hit"><td>95% &mdash; &pound;123,500</td><td class="r">&pound;92,625</td><td class="r" style="color:#166534">+&pound;8,523</td><td class="r">&pound;327</td><td class="r"><span class="bd g">All back</span></td></tr>
+        <tr class="hit"><td>90% &mdash; &pound;117,000</td><td class="r">&pound;87,750</td><td class="r" style="color:#166534">+&pound;3,648</td><td class="r">&pound;348</td><td class="r"><span class="bd g">All back</span></td></tr>
+        <tr class="hit"><td>87% &mdash; &pound;113,100</td><td class="r">&pound;84,825</td><td class="r" style="color:#166534">+&pound;723</td><td class="r">&pound;358</td><td class="r"><span class="bd g">All back</span></td></tr>
+        <tr class="warn"><td><strong>86% &mdash; &pound;111,800</strong></td><td class="r">&pound;83,850</td><td class="r" style="color:#92400e">&ndash;&pound;252</td><td class="r">&pound;366</td><td class="r"><span class="bd a">&pound;252 stuck</span></td></tr>
+        <tr class="warn"><td>85% &mdash; &pound;110,500</td><td class="r">&pound;82,875</td><td class="r" style="color:#92400e">&ndash;&pound;1,227</td><td class="r">&pound;370</td><td class="r"><span class="bd a">&pound;1,227 stuck</span></td></tr>
+        <tr class="danger"><td>80% &mdash; &pound;104,000</td><td class="r">&pound;78,000</td><td class="r" style="color:#991b1b">&ndash;&pound;6,102</td><td class="r">&pound;391</td><td class="r"><span class="bd r">&pound;6,102 stuck</span></td></tr>
+      </table>
+      <div class="ib a" style="margin-top:8px"><p><strong>The break point at &pound;130k:</strong> Surveyor must not go below <strong>86.3%</strong> to return all capital. At 85% they&rsquo;d come in at &pound;110,500 and only £1,227 would be stuck &mdash; the property is still profitable, just that small amount can&rsquo;t be recycled. This risk is manageable but tight. Target properties where the street evidence supports £140k+, so even a conservative surveyor comes in above £112k.</p></div>
+    </div>
+    <div>
+      <div class="ss" style="margin-top:0">The counterintuitive twist</div>
+      <div class="ib g" style="margin-top:0"><p><strong>Lower surveyor valuation = better monthly cashflow.</strong> If the surveyor comes in at 85% (£110,500), the mortgage is only £82,875 instead of £97,500 &mdash; saving £65/month. The property cash flows at £370/month instead of £306/month. The only downside is a small amount of capital stuck in the property that can&rsquo;t be recycled immediately. The property is still profitable either way.</p></div>
+
+      <div class="ss">How to manage the surveyor</div>
+      <table class="dt">
+        <tr><th>Action</th><th class="r">Impact</th></tr>
+        <tr><td><strong>Prepare a comparables pack</strong><br><span style="font-size:11px;color:#64748b">Print 5&ndash;6 recent sold prices from the same or adjacent streets showing refurbed 4-beds at £130k+. Hand to surveyor on arrival. They must justify in writing why they&rsquo;re ignoring comparable evidence.</span></td><td class="r" style="color:#166534;font-weight:700">High impact</td></tr>
+        <tr><td><strong>Document the works</strong><br><span style="font-size:11px;color:#64748b">Schedule of works (new kitchen £X, boiler £X, bathroom £X, full decoration, flooring, EPC works). Photos before and after. Receipts where available. Surveyors value what they can see and evidence.</span></td><td class="r" style="color:#166534;font-weight:700">High impact</td></tr>
+        <tr><td><strong>Use a different lender if needed</strong><br><span style="font-size:11px;color:#64748b">Fleet, Keystone, and Precise use different surveyor panels. One coming in low doesn&rsquo;t mean they all will. Broker can place same application elsewhere.</span></td><td class="r" style="color:#d97706;font-weight:700">Medium</td></tr>
+        <tr><td><strong>Formally challenge</strong><br><span style="font-size:11px;color:#64748b">Possible if surveyor is more than 10% below market. Requires written comparable evidence. Success rate is modest but worth doing on large discrepancies.</span></td><td class="r" style="color:#d97706;font-weight:700">Low&ndash;medium</td></tr>
       </table>
     </div>
-    <div>
-      <div class="ib a"><p><strong>Auction guide vs hammer prices:</strong> Guides are set 20%+ below expected sale price to attract bidders. A &pound;30k&ndash;&pound;40k guide typically hammers at &pound;45k&ndash;&pound;55k. This plan uses &pound;50,000 as the realistic hammer price &mdash; verified by Gareth&rsquo;s completed purchase.</p></div>
-      <div class="ib g" style="margin-top:10px"><p><strong>Rising prices help BRRR:</strong> At 3%/yr growth (Barrow 5yr average +14.4% per Land Registry), the 75% LTV drawdown grows proportionally. The surplus returned per deal increases year on year.</p></div>
-    </div>
   </div>
 </div>
 
+<!-- MONTHLY CASHFLOW -->
 <div class="sec">
-  <div class="st">Executive summary</div>
+  <div class="st">Monthly cashflow per property &mdash; self-managed, all costs</div>
   <div class="two">
     <div>
-      <p>Barrow-in-Furness sits at an unusual intersection: a large, well-paid, mobile workforce (BAE Systems Dreadnought programme &mdash; &pound;31bn, through the 2030s; plus AUKUS) combined with residential property prices well below the national average. This produces rental yields that are exceptional by UK standards for disciplined auction buyers.</p>
-      <p>The BRRR cycle &mdash; Buy at auction, Refurbish, Refinance, Rent &mdash; allows one &pound;100,000 investment to fund multiple properties in sequence. The 75% LTV mortgage on a &pound;130,000 post-refurb value returns &pound;97,500 &mdash; repaying the &pound;75,000 all-in cost and leaving a &pound;22,500 surplus for the next acquisition. After Property 1 refinances (~Month 5), the cycle is substantially self-funding.</p>
+      <div class="wf">
+        <div class="wf-row" style="background:#f0fdf4"><div class="wf-label" style="font-weight:700;color:#166534">Gross rent (4-bed, Barrow)</div><div class="wf-note"></div><div class="wf-val" style="color:#166534">+&pound;900</div></div>
+        <div class="wf-row"><div class="wf-label">Mortgage (5.25% IO on ~&pound;97,500 at £130k PRV)</div><div class="wf-note" style="color:#dc2626">47% of rent &mdash; fixed 5yr</div><div class="wf-val" style="color:#dc2626">&ndash;&pound;427</div></div>
+        <div class="wf-row" style="background:#f8fafc"><div class="wf-label">Maintenance reserve (5%)</div><div class="wf-note">Repairs, wear and tear</div><div class="wf-val">&ndash;&pound;45</div></div>
+        <div class="wf-row"><div class="wf-label">Void allowance (~2 weeks/year)</div><div class="wf-note">Between tenancies</div><div class="wf-val">&ndash;&pound;35</div></div>
+        <div class="wf-row" style="background:#f8fafc"><div class="wf-label">Buildings insurance</div><div class="wf-note"></div><div class="wf-val">&ndash;&pound;55</div></div>
+        <div class="wf-row"><div class="wf-label">Compliance (gas cert, EICR, EPC averaged)</div><div class="wf-note">Legal requirements</div><div class="wf-val">&ndash;&pound;14</div></div>
+        <div class="wf-row" style="background:#f8fafc"><div class="wf-label">Accountant (per-property share, 6 props)</div><div class="wf-note">&pound;1,000/yr &divide; 6</div><div class="wf-val">&ndash;&pound;14</div></div>
+        <div class="wf-row"><div class="wf-label">Tenant advertising (OpenRent, self-managed)</div><div class="wf-note">~&pound;50/let, 18mo avg</div><div class="wf-val">&ndash;&pound;5</div></div>
+        <div class="wf-row" style="background:#f0fdf4"><div class="wf-label" style="font-weight:700;color:#166534;font-size:15px">NET CASHFLOW &mdash; Year 1</div><div class="wf-note" style="color:#166534">34% of rent retained</div><div class="wf-val" style="color:#166534;font-size:17px"><strong>+&pound;306</strong></div></div>
+      </div>
     </div>
     <div>
-      <p>At current market rates (5.25% IO, Ltd company 5yr fix, April 2026), the monthly mortgage on a &pound;97,500 loan is &pound;427/month &mdash; 47% of the &pound;900 rent from a 4-bed property. Net cashflow in Year 1 is &pound;248/month per property. This is correct for interest-only BTL.</p>
-      <p>The mechanic: the mortgage is fixed for 5 years while rent grows 5&ndash;7%/year (ONS: W&amp;F rents rose 7.1% in 12 months to Dec 2025). The same property nets &pound;248/month in Year 1 and &pound;406/month in Year 5 from the same fixed mortgage. Every penny of rent growth is pure profit. Inflation works the same way &mdash; it erodes the real cost of the fixed mortgage each year.</p>
+      <div class="ss" style="margin-top:0">How cashflow grows over time (5% annual rent growth)</div>
+      <table class="dt">
+        <tr><th>Year</th><th class="r">Monthly rent</th><th class="r">Mortgage (fixed)</th><th class="r">Mtg % of rent</th><th class="r">Net/month</th></tr>
+        <tr><td>Year 1</td><td class="r">&pound;900</td><td class="r" style="color:#dc2626">&pound;427</td><td class="r" style="color:#dc2626">47%</td><td class="r" style="color:#92400e;font-weight:700">&pound;306</td></tr>
+        <tr><td>Year 2</td><td class="r">&pound;945</td><td class="r" style="color:#dc2626">&pound;427</td><td class="r" style="color:#d97706">45%</td><td class="r">&pound;348</td></tr>
+        <tr><td>Year 3</td><td class="r">&pound;992</td><td class="r" style="color:#dc2626">&pound;427</td><td class="r" style="color:#d97706">43%</td><td class="r">&pound;392</td></tr>
+        <tr><td>Year 4</td><td class="r">&pound;1,042</td><td class="r" style="color:#dc2626">&pound;427</td><td class="r" style="color:#166534">41%</td><td class="r" style="color:#166534">&pound;438</td></tr>
+        <tr><td>Year 5</td><td class="r">&pound;1,094</td><td class="r" style="color:#dc2626">&pound;427</td><td class="r" style="color:#166534">39%</td><td class="r" style="color:#166534">&pound;486</td></tr>
+        <tr><td>Year 7</td><td class="r">&pound;1,206</td><td class="r" style="color:#dc2626">&pound;427</td><td class="r" style="color:#166534">35%</td><td class="r" style="color:#166534">&pound;590</td></tr>
+        <tr><td>Year 10</td><td class="r">&pound;1,467</td><td class="r" style="color:#dc2626">&pound;427</td><td class="r" style="color:#166534">29%</td><td class="r" style="color:#166534;font-weight:700">&pound;775</td></tr>
+      </table>
+      <p style="font-size:11px;color:#64748b;margin-top:5px">Rent growth 5%/yr (conservative &mdash; ONS W&amp;F actual: +7.1%). Mortgage fixed for 5-year term. By Year 10, net cashflow is 2.5&times; Year 1. The mortgage falls from 47% to 29% of rent purely through rent growth with no action required.</p>
     </div>
   </div>
 </div>
 
+<!-- LOAN AND INCOME RAMP -->
 <div class="sec">
-  <div class="st">Verified market data &mdash; April 2026</div>
+  <div class="st">The £100,000 loan &mdash; £2,000/month from day one</div>
+  <p style="margin-bottom:10px">No repayment schedule. 4% accruing. The loan funds both Property 1 and Gareth&rsquo;s income until rental income takes over. &pound;2,000/month is received from Month 1 regardless of acquisition pace &mdash; source changes from loan to rental over time.</p>
   <div class="two">
-    <table class="dt">
-      <tr><th>Property metric</th><th class="r">Figure</th><th class="r">Source</th></tr>
-      <tr><td>Barrow avg house price</td><td class="r">~&pound;161k&ndash;&pound;180k</td><td class="r">Land Registry</td></tr>
-      <tr><td>5-yr house price growth</td><td class="r">+14.4% (~2.7%/yr)</td><td class="r">Property Solvers</td></tr>
-      <tr><td>Ltd co BTL 5yr fix</td><td class="r">~5.0%&ndash;5.5%</td><td class="r">NRLA, Apr 2026</td></tr>
-      <tr><td>Best personal BTL 5yr</td><td class="r">4.29% (TMW)</td><td class="r">HOA, Apr 2026</td></tr>
-    </table>
-    <table class="dt">
-      <tr><th>Rental metric</th><th class="r">Figure</th><th class="r">Source</th></tr>
-      <tr><td>W&amp;F avg private rent</td><td class="r">&pound;785/month</td><td class="r">ONS, Dec 2025</td></tr>
-      <tr><td>W&amp;F rent growth (12 months)</td><td class="r">+7.1%</td><td class="r">ONS, Dec 2025</td></tr>
-      <tr><td>Terraced/flat rent growth</td><td class="r">+7.4%</td><td class="r">ONS, Dec 2025</td></tr>
-      <tr><td>Plan uses (conservative)</td><td class="r">+5.0%/yr</td><td class="r">This plan</td></tr>
-    </table>
-  </div>
-</div>
-
-<div class="sec">
-  <div class="st">Three investment scenarios &mdash; &pound;100,000 director&rsquo;s loan</div>
-  <p style="margin-bottom:14px">All three scenarios maintain positive monthly cashflow per property. The break-even scenario represents a genuinely difficult market &mdash; it exists to show where the model strains, not as a target.</p>
-  <div class="three">
-    <div class="sc" style="border-top:3px solid #185FA5">
-      <div class="sch" style="background:#eff6ff">
-        <div style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#185FA5;margin-bottom:2px">Based on verified property</div>
-        <div style="font-size:16px;font-weight:700;color:#1e3a5f;margin-bottom:4px">Expected</div>
-        <div style="font-size:12px;color:#3b82f6;line-height:1.5">Gareth&rsquo;s real numbers. 2 properties/year, BAE demand, 5.25% rate, 5% rent growth, 3% HP growth.</div>
-      </div>
-      <div class="scb">
-        <div class="sm2">
-          <div class="sm"><div class="sml">All-in cost</div><div class="smv">&pound;75,000</div></div>
-          <div class="sm"><div class="sml">Post-refurb value</div><div class="smv">&pound;130,000</div></div>
-          <div class="sm"><div class="sml">BRRR ratio</div><div class="smv" style="color:#166534">173% &check;</div></div>
-          <div class="sm"><div class="sml">Surplus returned</div><div class="smv" style="color:#166534">+&pound;22,500</div></div>
-          <div class="sm"><div class="sml">Monthly mortgage</div><div class="smv">&pound;427/mo</div></div>
-          <div class="sm"><div class="sml">Rent year 1</div><div class="smv">&pound;900/mo</div></div>
-          <div class="sm"><div class="sml">Net/property yr 1</div><div class="smv" style="color:#166534">&pound;248/mo</div></div>
-          <div class="sm"><div class="sml">Net/property yr 5</div><div class="smv" style="color:#166534">&pound;406/mo</div></div>
-        </div>
-        <div style="border-top:1px solid #e2e8f0;padding-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:3px">
-          <span style="font-size:11px;color:#64748b">5.25% rate &middot; 5% rent growth</span>
-          <span style="font-size:12px;font-weight:700;color:#166534">&pound;2,000+: Year 5</span>
-        </div>
+    <div>
+      <div class="tl">
+        <div class="tl-i"><div class="tl-h">Month 1 &mdash; Acquisition</div><div class="tl-b"><span class="mn">&pound;84,102</span> deployed. <span class="mn">&pound;15,898</span> WC reserve remaining. Gaz draws <span class="mn">&pound;2,000/mo</span>. Loan interest: <span class="mn">&pound;333/mo</span> accruing, no cash payment.</div></div>
+        <div class="tl-i"><div class="tl-h">Month 5 &mdash; BRRR refinance</div><div class="tl-b">RICS valuation <span class="mn">&pound;130,000</span>. Mortgage: <span class="mn">&pound;97,500</span> returned. Company holds <span class="mn">~&pound;107,000</span>. Property let. First rental income: <span class="mn">&pound;306/mo</span> net.</div></div>
+        <div class="tl-i"><div class="tl-h">Months 5&ndash;12</div><div class="tl-b">Rental covers <span class="mn">&pound;306/mo</span>. Gaz draws <span class="mn">&pound;2,000/mo</span>. Gap of <span class="mn">&pound;1,694/mo</span> from BRRR surplus. Company holds ~<span class="mn">&pound;89,000</span> at year end &mdash; enough for Property 2.</div></div>
+        <div class="tl-i" style="margin-bottom:0"><div class="tl-h">End of Year 1</div><div class="tl-b">1 property rented. Gaz received <span class="mn">&pound;24,000</span> (12 &times; &pound;2k). Loan balance: <span class="mn">~&pound;104,000</span>. Model self-sustaining from here.</div></div>
       </div>
     </div>
-
-    <div class="sc" style="border-top:3px solid #d97706">
-      <div class="sch" style="background:#fffbeb">
-        <div style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#d97706;margin-bottom:2px">Challenging conditions</div>
-        <div style="font-size:16px;font-weight:700;color:#451a03;margin-bottom:4px">Break-even</div>
-        <div style="font-size:12px;color:#92400e;line-height:1.5">Higher hammer, higher rates, slow rent growth. 1 property/year. BRRR barely returns capital.</div>
-      </div>
-      <div class="scb">
-        <div class="sm2">
-          <div class="sm"><div class="sml">All-in cost</div><div class="smv">&pound;83,500</div></div>
-          <div class="sm"><div class="sml">Post-refurb value</div><div class="smv">&pound;112,000</div></div>
-          <div class="sm"><div class="sml">BRRR ratio</div><div class="smv" style="color:#92400e">134% &#9650;</div></div>
-          <div class="sm"><div class="sml">Surplus returned</div><div class="smv" style="color:#92400e">+&pound;500</div></div>
-          <div class="sm"><div class="sml">Monthly mortgage</div><div class="smv">&pound;438/mo</div></div>
-          <div class="sm"><div class="sml">Rent year 1</div><div class="smv">&pound;800/mo</div></div>
-          <div class="sm"><div class="sml">Net/property yr 1</div><div class="smv" style="color:#92400e">&pound;156/mo</div></div>
-          <div class="sm"><div class="sml">Net/property yr 5</div><div class="smv" style="color:#92400e">&pound;204/mo</div></div>
-        </div>
-        <div style="border-top:1px solid #e2e8f0;padding-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:3px">
-          <span style="font-size:11px;color:#64748b">6.25% rate &middot; 2% rent growth</span>
-          <span style="font-size:12px;font-weight:700;color:#92400e">&pound;2,000+: beyond 8 years</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="sc" style="border-top:3px solid #16a34a">
-      <div class="sch" style="background:#f0fdf4">
-        <div style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#16a34a;margin-bottom:2px">Strong conditions</div>
-        <div style="font-size:16px;font-weight:700;color:#052e16;margin-bottom:4px">Beyond expectations</div>
-        <div style="font-size:12px;color:#15803d;line-height:1.5">Excellent deals, 7% rent growth (ONS actual Dec 2025). 3 properties/year. 4.75% rate.</div>
-      </div>
-      <div class="scb">
-        <div class="sm2">
-          <div class="sm"><div class="sml">All-in cost</div><div class="smv">&pound;63,500</div></div>
-          <div class="sm"><div class="sml">Post-refurb value</div><div class="smv">&pound;148,000</div></div>
-          <div class="sm"><div class="sml">BRRR ratio</div><div class="smv" style="color:#166534">233% &check;&check;</div></div>
-          <div class="sm"><div class="sml">Surplus returned</div><div class="smv" style="color:#166534">+&pound;47,500</div></div>
-          <div class="sm"><div class="sml">Monthly mortgage</div><div class="smv">&pound;439/mo</div></div>
-          <div class="sm"><div class="sml">Rent year 1</div><div class="smv">&pound;1,050/mo</div></div>
-          <div class="sm"><div class="sml">Net/property yr 1</div><div class="smv" style="color:#166534">&pound;358/mo</div></div>
-          <div class="sm"><div class="sml">Net/property yr 5</div><div class="smv" style="color:#166534">&pound;624/mo</div></div>
-        </div>
-        <div style="border-top:1px solid #e2e8f0;padding-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:3px">
-          <span style="font-size:11px;color:#64748b">4.75% rate &middot; 7% rent growth</span>
-          <span style="font-size:12px;font-weight:700;color:#166534">&pound;2,000+: Year 2</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ss" style="margin-top:16px">Net profit per property per month &mdash; fixed mortgage, growing rent</div>
-  <div style="overflow-x:auto">
-    <table class="dt" style="min-width:620px">
-      <tr><th>Year</th><th class="r">Exp. rent</th><th class="r">Exp. net</th><th class="r">BE rent</th><th class="r">BE net</th><th class="r">Beyond rent</th><th class="r">Beyond net</th></tr>
-      <tr><td>Year 1</td><td class="r">&pound;900</td><td class="r" style="color:#166534;font-weight:700">&pound;248</td><td class="r">&pound;800</td><td class="r" style="color:#92400e">&pound;156</td><td class="r">&pound;1,050</td><td class="r" style="color:#166534;font-weight:700">&pound;358</td></tr>
-      <tr><td>Year 2</td><td class="r">&pound;945</td><td class="r" style="color:#166534">&pound;285</td><td class="r">&pound;816</td><td class="r" style="color:#92400e">&pound;167</td><td class="r">&pound;1,124</td><td class="r" style="color:#166534">&pound;417</td></tr>
-      <tr><td>Year 3</td><td class="r">&pound;992</td><td class="r" style="color:#166534">&pound;323</td><td class="r">&pound;832</td><td class="r" style="color:#92400e">&pound;179</td><td class="r">&pound;1,203</td><td class="r" style="color:#166534">&pound;481</td></tr>
-      <tr><td>Year 4</td><td class="r">&pound;1,042</td><td class="r" style="color:#166534">&pound;363</td><td class="r">&pound;849</td><td class="r" style="color:#92400e">&pound;191</td><td class="r">&pound;1,287</td><td class="r" style="color:#166534">&pound;551</td></tr>
-      <tr><td>Year 5</td><td class="r">&pound;1,094</td><td class="r" style="color:#166534">&pound;406</td><td class="r">&pound;866</td><td class="r" style="color:#92400e">&pound;204</td><td class="r">&pound;1,377</td><td class="r" style="color:#166534">&pound;624</td></tr>
-      <tr><td>Year 6</td><td class="r">&pound;1,149</td><td class="r" style="color:#166534">&pound;450</td><td class="r">&pound;883</td><td class="r" style="color:#92400e">&pound;218</td><td class="r">&pound;1,473</td><td class="r" style="color:#166534">&pound;703</td></tr>
-      <tr><td>Year 7</td><td class="r">&pound;1,206</td><td class="r" style="color:#166534">&pound;497</td><td class="r">&pound;901</td><td class="r">&pound;232</td><td class="r">&pound;1,576</td><td class="r" style="color:#166534">&pound;785</td></tr>
-      <tr><td>Year 8</td><td class="r">&pound;1,267</td><td class="r" style="color:#166534">&pound;546</td><td class="r">&pound;919</td><td class="r">&pound;247</td><td class="r">&pound;1,686</td><td class="r" style="color:#166534">&pound;875</td></tr>
-    </table>
-  </div>
-  <p style="font-size:12px;color:#64748b;margin-top:6px">Costs: agent 10%, maintenance 5%, 2 weeks void, &pound;55/mo insurance. Expected mortgage: &pound;427/mo (fixed). Break-even: &pound;438/mo (fixed). Beyond: &pound;439/mo (fixed). All mortgages fixed for 5 years &mdash; rent grows, mortgage does not.</p>
-</div>
-
-<div class="sec">
-  <div class="st">Director&rsquo;s income &mdash; growing beyond &pound;2,000 and beating inflation</div>
-  <p style="margin-bottom:8px">&pound;2,000/month in today&rsquo;s money loses purchasing power every year. At 3% annual inflation, maintaining the same standard of living requires <strong>&pound;2,319/month by Year 5</strong>, <strong>&pound;2,534 by Year 8</strong>, and <strong>&pound;2,688 by Year 10</strong>. The bar charts below show actual income against this rising target. The red marker is the inflation-adjusted target &mdash; income must reach past it to maintain real purchasing power.</p>
-  <div class="ib g" style="margin-bottom:14px"><p><strong>Why income grows faster than inflation:</strong> (1) Rent rises 5&ndash;7%/yr on all properties. (2) Each new property multiplies total income. (3) The fixed mortgage costs nothing extra as inflation rises. By Year 10, the &pound;427/month mortgage on Property 1 is worth significantly less in real terms &mdash; inflation is quietly subsidising the model every year.</p></div>
-
-  <div class="ss">Expected scenario (2 properties/year) &mdash; income vs inflation-adjusted &pound;2,000 target</div>
-  <div class="leg">
-    <span><span style="width:14px;height:12px;background:#185FA5;border-radius:2px;display:inline-block"></span>Actual portfolio income</span>
-    <span><span style="width:2px;height:14px;background:#dc2626;display:inline-block"></span>Inflation-adjusted &pound;2,000 target (3%/yr)</span>
-  </div>
-  <div class="br"><div class="by">Year 1</div><div class="bw"><div class="bf" style="width:35%;background:#185FA5"></div><div class="bm" style="left:52%"></div></div><div class="bv"><span class="lo">&pound;1,400/mo</span> &nbsp;&middot;&nbsp; target &pound;2,060 &nbsp;&middot;&nbsp; 68% of target</div></div>
-  <div class="br"><div class="by">Year 2</div><div class="bw"><div class="bf" style="width:42%;background:#185FA5"></div><div class="bm" style="left:53%"></div></div><div class="bv"><span class="lo">&pound;1,680/mo</span> &nbsp;&middot;&nbsp; target &pound;2,122 &nbsp;&middot;&nbsp; 79% of target</div></div>
-  <div class="br"><div class="by">Year 3</div><div class="bw"><div class="bf" style="width:48%;background:#185FA5"></div><div class="bm" style="left:55%"></div></div><div class="bv"><span class="lo">&pound;1,900/mo</span> &nbsp;&middot;&nbsp; target &pound;2,185 &nbsp;&middot;&nbsp; 87% of target</div></div>
-  <div class="br"><div class="by">Year 4</div><div class="bw"><div class="bf" style="width:53%;background:#185FA5"></div><div class="bm" style="left:56%"></div></div><div class="bv"><span class="lo">&pound;2,100/mo</span> &nbsp;&middot;&nbsp; target &pound;2,251 &nbsp;&middot;&nbsp; 93% of target &mdash; close</div></div>
-  <div class="br"><div class="by" style="color:#166534;font-weight:700">Year 5 &#10003;</div><div class="bw"><div class="bf" style="width:59%;background:#166534"></div><div class="bm" style="left:58%"></div></div><div class="bv"><span class="hi">&pound;2,350/mo &mdash; first year income beats inflation-adjusted target (&pound;2,319)</span></div></div>
-  <div class="br"><div class="by">Year 6</div><div class="bw"><div class="bf" style="width:65%;background:#166534"></div><div class="bm" style="left:60%"></div></div><div class="bv"><span class="hi">&pound;2,600/mo</span> &nbsp;&middot;&nbsp; target &pound;2,388 &nbsp;&middot;&nbsp; &pound;212 above</div></div>
-  <div class="br"><div class="by">Year 7</div><div class="bw"><div class="bf" style="width:72%;background:#166534"></div><div class="bm" style="left:62%"></div></div><div class="bv"><span class="hi">&pound;2,870/mo</span> &nbsp;&middot;&nbsp; target &pound;2,460 &nbsp;&middot;&nbsp; &pound;410 above</div></div>
-  <div class="br"><div class="by">Year 8</div><div class="bw"><div class="bf" style="width:79%;background:#166534"></div><div class="bm" style="left:63%"></div></div><div class="bv"><span class="hi">&pound;3,150/mo</span> &nbsp;&middot;&nbsp; target &pound;2,534 &nbsp;&middot;&nbsp; &pound;616 above</div></div>
-  <div class="br"><div class="by">Year 9</div><div class="bw"><div class="bf" style="width:86%;background:#166534"></div><div class="bm" style="left:65%"></div></div><div class="bv"><span class="hi">&pound;3,430/mo</span> &nbsp;&middot;&nbsp; target &pound;2,610 &nbsp;&middot;&nbsp; &pound;820 above</div></div>
-  <div class="br"><div class="by">Year 10</div><div class="bw"><div class="bf" style="width:93%;background:#166534"></div><div class="bm" style="left:67%"></div></div><div class="bv"><span class="hi">&pound;3,720/mo</span> &nbsp;&middot;&nbsp; target &pound;2,688 &nbsp;&middot;&nbsp; &pound;1,032 above &mdash; growing surplus each year</div></div>
-
-  <div class="ss" style="margin-top:16px">How income is structured &mdash; salary + dividends (most tax-efficient combination)</div>
-  <div style="overflow-x:auto">
-    <table class="dt" style="min-width:580px">
-      <tr><th>Period</th><th class="r">Salary/yr</th><th class="r">Salary tax</th><th class="r">Dividend/yr</th><th class="r">Dividend tax</th><th class="r">Net to household/mo</th></tr>
-      <tr><td>Years 1&ndash;2 (WC bridge)</td><td class="r">&pound;12,570</td><td class="r" style="color:#166534">&pound;0</td><td class="r">&pound;3,576 from WC reserve</td><td class="r">&pound;313</td><td class="r"><strong>~&pound;1,360/mo</strong></td></tr>
-      <tr><td>Years 3&ndash;4 (growing)</td><td class="r">&pound;12,570</td><td class="r" style="color:#166534">&pound;0</td><td class="r">~&pound;13,500 from rent</td><td class="r">~&pound;1,181</td><td class="r"><strong>~&pound;2,030/mo</strong></td></tr>
-      <tr><td>Years 5&ndash;6 (established)</td><td class="r">&pound;12,570</td><td class="r" style="color:#166534">&pound;0</td><td class="r">~&pound;18,000 from rent</td><td class="r">~&pound;1,575</td><td class="r"><strong>~&pound;2,380/mo</strong></td></tr>
-      <tr><td>Years 7&ndash;8 (scaled)</td><td class="r">&pound;12,570</td><td class="r" style="color:#166534">&pound;0</td><td class="r">~&pound;24,000 from rent</td><td class="r">~&pound;2,100</td><td class="r"><strong>~&pound;2,940/mo</strong></td></tr>
-      <tr><td>Year 10 (mature)</td><td class="r">&pound;12,570</td><td class="r" style="color:#166534">&pound;0</td><td class="r">~&pound;32,000 from rent</td><td class="r">~&pound;2,800</td><td class="r"><strong>~&pound;3,650/mo</strong></td></tr>
-    </table>
-  </div>
-  <p style="font-size:12px;color:#64748b;margin-top:6px">Salary to personal allowance (currently &pound;12,570) = 0% income tax, 0% employee NI. Dividends taxed at 8.75% (basic rate) above &pound;500 allowance. Corp tax at 19% deducted before dividend is paid. These are net take-home figures after all applicable tax.</p>
-</div>
-
-<div class="sec">
-  <div class="st">Year-by-year portfolio summary &mdash; Expected scenario</div>
-  <div style="overflow-x:auto">
-    <table class="dt" style="min-width:660px">
-      <tr><th>Year</th><th class="r">Props</th><th class="r">BRRR surplus</th><th class="r">Investor interest</th><th class="r">Net income/yr</th><th class="r">Household/mo</th><th class="r">Portfolio equity</th></tr>
-      <tr><td>Year 1</td><td class="r">2</td><td class="r" style="color:#166534">&pound;45,000</td><td class="r" style="color:#94a3b8">Deferred</td><td class="r">&pound;5,952 + WC</td><td class="r"><strong>&pound;1,400</strong></td><td class="r">&pound;72,000</td></tr>
-      <tr><td>Year 2</td><td class="r">4</td><td class="r" style="color:#166534">&pound;45,000</td><td class="r" style="color:#94a3b8">Deferred</td><td class="r">&pound;13,680</td><td class="r"><strong>&pound;1,680</strong></td><td class="r">&pound;152,000</td></tr>
-      <tr><td>Year 3</td><td class="r">6</td><td class="r" style="color:#166534">&pound;45,000</td><td class="r" style="color:#d97706">&pound;4,326/yr</td><td class="r">&pound;18,474</td><td class="r"><strong>&pound;1,900</strong></td><td class="r">&pound;244,000</td></tr>
-      <tr><td>Year 4</td><td class="r">8</td><td class="r" style="color:#166534">Loan repaid</td><td class="r" style="color:#d97706">&pound;4,326/yr</td><td class="r">&pound;25,200</td><td class="r"><strong style="color:#166534">&pound;2,100</strong></td><td class="r">&pound;352,000</td></tr>
-      <tr class="hit"><td><strong>Year 5 &#10003;</strong></td><td class="r">10</td><td class="r" style="color:#166534">Loan clear</td><td class="r" style="color:#166534">Optional</td><td class="r">&pound;28,200</td><td class="r"><strong style="color:#166534">&pound;2,350 &mdash; beats inflation</strong></td><td class="r">&pound;480,000</td></tr>
-      <tr><td>Year 6</td><td class="r">12</td><td class="r">&mdash;</td><td class="r" style="color:#166534">&mdash;</td><td class="r">&pound;31,200</td><td class="r"><strong style="color:#166534">&pound;2,600</strong></td><td class="r">&pound;628,000</td></tr>
-      <tr><td>Year 7</td><td class="r">14</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&pound;34,440</td><td class="r"><strong style="color:#166534">&pound;2,870</strong></td><td class="r">&pound;790,000</td></tr>
-      <tr><td>Year 8</td><td class="r">16</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&pound;37,800</td><td class="r"><strong style="color:#166534">&pound;3,150</strong></td><td class="r">&pound;970,000</td></tr>
-    </table>
-  </div>
-  <p style="font-size:12px;color:#64748b;margin-top:6px">BRRR surplus: &pound;22,500/property &times; 2/yr = &pound;45,000/year from Year 1. Loan repaid from surplus alone by Year 3&ndash;4 with no impact on monthly income. Portfolio equity assumes 3% annual property price growth.</p>
-</div>
-
-<div class="sec">
-  <div class="st">Break-even thresholds &mdash; what has to go wrong to break the plan?</div>
-  <p style="margin-bottom:10px">For each variable, the break-even point is where monthly cashflow per property hits exactly zero. The safety margin shows how far current conditions must deteriorate before that happens.</p>
-  <div style="overflow-x:auto">
-    <table class="dt" style="min-width:640px">
-      <tr><th>Variable</th><th class="r">Expected &mdash; current / break-even / margin</th><th class="r">Break-even &mdash; current / break-even / margin</th><th class="r">Beyond &mdash; current / break-even / margin</th></tr>
-      <tr><td><strong>Mortgage rate</strong></td><td class="r"><span style="color:#166534">5.25% &rarr; 8.3% limit &rarr; +3.1% margin</span></td><td class="r"><span style="color:#92400e">6.25% &rarr; 8.5% limit &rarr; +2.3% margin</span></td><td class="r"><span style="color:#166534">4.75% &rarr; 8.6% limit &rarr; +3.9% margin</span></td></tr>
-      <tr><td><strong>Monthly rent</strong></td><td class="r"><span style="color:#166534">&pound;900 &rarr; &pound;594 min &rarr; &pound;306 buffer</span></td><td class="r"><span style="color:#92400e">&pound;800 &rarr; &pound;608 min &rarr; &pound;192 buffer</span></td><td class="r"><span style="color:#166534">&pound;1,050 &rarr; &pound;609 min &rarr; &pound;441 buffer</span></td></tr>
-      <tr><td><strong>Post-refurb value (BRRR returns all capital)</strong></td><td class="r"><span style="color:#166534">&pound;130k &rarr; &pound;100k min &rarr; &pound;30k buffer</span></td><td class="r"><span style="color:#991b1b">&pound;112k &rarr; &pound;111,333 min &rarr; &pound;667 buffer (very thin)</span></td><td class="r"><span style="color:#166534">&pound;148k &rarr; &pound;84,667 min &rarr; &pound;63,333 buffer</span></td></tr>
-      <tr><td><strong>BRRR 160% rule</strong></td><td class="r"><span style="color:#166534">173% &mdash; 13 points above minimum</span></td><td class="r"><span style="color:#991b1b">134% &mdash; BELOW 160% minimum (capital not fully returned)</span></td><td class="r"><span style="color:#166534">233% &mdash; 73 points above minimum</span></td></tr>
-      <tr><td><strong>Void weeks before CF = zero</strong></td><td class="r"><span style="color:#166534">2 wks &rarr; 19 wks max &rarr; 17 wks headroom</span></td><td class="r"><span style="color:#92400e">2 wks &rarr; 10 wks max &rarr; 8 wks headroom</span></td><td class="r"><span style="color:#166534">2 wks &rarr; 23 wks max &rarr; 21 wks headroom</span></td></tr>
-    </table>
-  </div>
-  <div class="ib r" style="margin-top:10px"><p><strong>Break-even scenario warning:</strong> Post-refurb buffer is only &pound;667 and the 134% BRRR ratio is below the 160% minimum. In practice, Gareth would not proceed with a deal at these margins &mdash; the 160% Rule gates every acquisition. This scenario exists to show what the model looks like under severe stress, not as a target.</p></div>
-</div>
-
-<div class="sec">
-  <div class="st">Investor loan &mdash; &pound;100,000 at 4% &middot; 24 months deferred &middot; gradual capital return</div>
-  <div class="two">
     <div>
       <table class="dt">
         <tr><td>Loan amount</td><td class="r">&pound;100,000</td></tr>
-        <tr><td>Rate</td><td class="r">4% per annum (accruing from day 1)</td></tr>
-        <tr><td>Years 1&ndash;2</td><td class="r">Interest deferred &mdash; no cash leaves company</td></tr>
-        <tr><td>Accrued interest (24 months)</td><td class="r">~&pound;8,160</td></tr>
-        <tr><td>Balance at month 25</td><td class="r">~&pound;108,160</td></tr>
-        <tr><td>Quarterly cash payment (from mo 25)</td><td class="r">~&pound;1,082/quarter</td></tr>
-        <tr><td>Capital repayment</td><td class="r">From BRRR surpluses &mdash; not a lump sum</td></tr>
-        <tr class="sep"><td>Total interest over 4 years</td><td class="r">~&pound;21,500</td></tr>
+        <tr><td>Rate</td><td class="r">4% p.a. (accruing day 1)</td></tr>
+        <tr><td>Cash payments</td><td class="r">None required</td></tr>
+        <tr><td>Repayment schedule</td><td class="r">None &mdash; when income allows</td></tr>
+        <tr><td>Annual accrual</td><td class="r">&pound;4,000 (rising slightly)</td></tr>
+        <tr><td>Balance after 3 years</td><td class="r">~&pound;112,500</td></tr>
+        <tr><td>Balance after 5 years</td><td class="r">~&pound;121,700</td></tr>
+        <tr><td>Agreement</td><td class="r">Simple written document</td></tr>
+      </table>
+      <div class="ib g" style="margin-top:8px"><p><strong>Why no repayment schedule works:</strong> Surpluses stay in the company growing the portfolio. By Year 7, rental income alone exceeds &pound;2,000/month and surpluses begin naturally reducing the loan. Portfolio equity by Year 5 (~&pound;300k+) dwarfs the loan balance (~&pound;122k). Repayable from 2&ndash;3 months of surplus at any point.</p></div>
+    </div>
+  </div>
+
+  <div class="ss" style="margin-top:14px">Income ramp &mdash; &pound;2,000/month guaranteed, source shifts from loan to rental</div>
+  <div style="font-size:12px;color:#475569;margin-bottom:8px;display:flex;gap:14px;flex-wrap:wrap">
+    <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#185FA5;border-radius:2px"></span>From rental income</span>
+    <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d97706;border-radius:2px;opacity:.55"></span>From BRRR surplus/loan bridge</span>
+    <span style="display:flex;align-items:center;gap:4px"><span style="width:2px;height:14px;background:#dc2626"></span>Inflation-adjusted &pound;2,000 (3%/yr)</span>
+  </div>
+  <p style="font-size:12px;font-weight:700;color:#1a3557;margin-bottom:6px">Realistic scenario &mdash; 1.5 properties/year (some years 1, some 2)</p>
+  <div class="br"><div class="by">Year 1</div><div class="bw"><div class="bf" style="width:4%;background:#185FA5"></div><div class="bs" style="left:4%;width:46%;background:#d97706"></div><div class="bm" style="left:52%"></div></div><div class="bv"><span class="mn">&pound;2,000/mo</span> &mdash; <span class="am">&pound;1,847 loan/surplus &middot; &pound;153 rent</span> &middot; infl. target &pound;2,060</div></div>
+  <div class="br"><div class="by">Year 2</div><div class="bw"><div class="bf" style="width:12%;background:#185FA5"></div><div class="bs" style="left:12%;width:38%;background:#d97706"></div><div class="bm" style="left:53%"></div></div><div class="bv"><span class="mn">&pound;2,000/mo</span> &mdash; <span class="am">&pound;1,494 surplus &middot; &pound;506 rent (2&ndash;3 props)</span> &middot; infl. target &pound;2,122</div></div>
+  <div class="br"><div class="by">Year 3</div><div class="bw"><div class="bf" style="width:22%;background:#185FA5"></div><div class="bs" style="left:22%;width:28%;background:#d97706"></div><div class="bm" style="left:55%"></div></div><div class="bv"><span class="mn">&pound;2,000/mo</span> &mdash; <span class="am">&pound;1,104 surplus &middot; &pound;896 rent (4&ndash;5 props)</span> &middot; infl. target &pound;2,185</div></div>
+  <div class="br"><div class="by">Year 4</div><div class="bw"><div class="bf" style="width:33%;background:#185FA5"></div><div class="bs" style="left:33%;width:17%;background:#d97706"></div><div class="bm" style="left:56%"></div></div><div class="bv"><span class="mn">&pound;2,000/mo</span> &mdash; <span class="am">&pound;680 supplement &middot; &pound;1,320 rent (6 props)</span> &middot; infl. target &pound;2,251</div></div>
+  <div class="br"><div class="by">Year 5</div><div class="bw"><div class="bf" style="width:42%;background:#185FA5"></div><div class="bs" style="left:42%;width:8%;background:#d97706"></div><div class="bm" style="left:58%"></div></div><div class="bv"><span class="mn">&pound;2,000/mo</span> &mdash; <span class="am">&pound;320 supplement &middot; &pound;1,680 rent (7&ndash;8 props)</span> &middot; infl. target &pound;2,319</div></div>
+  <div class="br"><div class="by" style="color:#166534;font-weight:700">Year 6 &#10003;</div><div class="bw"><div class="bf" style="width:52%;background:#166534"></div><div class="bm" style="left:60%"></div></div><div class="bv"><span class="hi">&pound;2,075/mo from rental alone &mdash; self-sustaining. Surplus starts reducing loan.</span> &middot; target &pound;2,388</div></div>
+  <div class="br"><div class="by">Year 7</div><div class="bw"><div class="bf" style="width:58%;background:#166534"></div><div class="bm" style="left:62%"></div></div><div class="bv"><span class="hi">&pound;2,325/mo &mdash; comfortably ahead. Loan repayment accelerates.</span> &middot; target &pound;2,460</div></div>
+  <div class="br"><div class="by">Year 8</div><div class="bw"><div class="bf" style="width:64%;background:#166534"></div><div class="bm" style="left:63%"></div></div><div class="bv"><span class="hi">&pound;2,560/mo &mdash; above inflation-adjusted target (&pound;2,534). Growing surplus.</span></div></div>
+  <div class="br"><div class="by">Year 10</div><div class="bw"><div class="bf" style="width:76%;background:#166534"></div><div class="bm" style="left:67%"></div></div><div class="bv"><span class="hi">&pound;3,040/mo &mdash; well above target (&pound;2,688). Loan clear or near-clear.</span></div></div>
+</div>
+
+<!-- YEAR BY YEAR -->
+<div class="sec">
+  <div class="st">Year-by-year portfolio summary &mdash; realistic scenario (1.5 props/yr)</div>
+  <div style="overflow-x:auto">
+    <table class="dt" style="min-width:720px">
+      <tr><th>Year</th><th class="r">Props</th><th class="r">BRRR surplus</th><th class="r">Rental/yr (net)</th><th class="r">Supplement</th><th class="r">Total/mo</th><th class="r">Portfolio equity</th><th class="r">Loan balance</th></tr>
+      <tr><td>Year 1</td><td class="r">1&ndash;2</td><td class="r" style="color:#166534">&pound;26,796</td><td class="r">&pound;1,836</td><td class="r" style="color:#d97706">&pound;22,164</td><td class="r" style="font-weight:700">&pound;2,000</td><td class="r">&pound;40,000</td><td class="r" style="color:#dc2626">~&pound;104,000</td></tr>
+      <tr><td>Year 2</td><td class="r">2&ndash;3</td><td class="r" style="color:#166534">&pound;26,796</td><td class="r">&pound;6,072</td><td class="r" style="color:#d97706">&pound;17,928</td><td class="r" style="font-weight:700">&pound;2,000</td><td class="r">&pound;88,000</td><td class="r" style="color:#dc2626">~&pound;108,000</td></tr>
+      <tr><td>Year 3</td><td class="r">4&ndash;5</td><td class="r" style="color:#166534">&pound;26,796</td><td class="r">&pound;10,752</td><td class="r" style="color:#d97706">&pound;13,248</td><td class="r" style="font-weight:700">&pound;2,000</td><td class="r">&pound;145,000</td><td class="r" style="color:#dc2626">~&pound;112,000</td></tr>
+      <tr><td>Year 4</td><td class="r">5&ndash;6</td><td class="r" style="color:#166534">&pound;26,796</td><td class="r">&pound;15,840</td><td class="r" style="color:#d97706">&pound;8,160</td><td class="r" style="font-weight:700">&pound;2,000</td><td class="r">&pound;207,000</td><td class="r" style="color:#dc2626">~&pound;116,000</td></tr>
+      <tr><td>Year 5</td><td class="r">7&ndash;8</td><td class="r" style="color:#166534">&pound;26,796</td><td class="r">&pound;20,160</td><td class="r" style="color:#d97706">&pound;3,840</td><td class="r" style="font-weight:700">&pound;2,000</td><td class="r">&pound;296,000</td><td class="r" style="color:#dc2626">~&pound;120,000</td></tr>
+      <tr class="hit"><td><strong>Year 6 &#10003;</strong></td><td class="r">9</td><td class="r" style="color:#166534">Surplus</td><td class="r">&pound;24,900</td><td class="r" style="color:#166534">Nil</td><td class="r" style="font-weight:700;color:#166534">&pound;2,075 &#10003;</td><td class="r">&pound;375,000</td><td class="r" style="color:#d97706">Repaying</td></tr>
+      <tr><td>Year 7</td><td class="r">10+</td><td class="r" style="color:#166534">Growing</td><td class="r">&pound;27,900</td><td class="r" style="color:#166534">Surplus</td><td class="r" style="font-weight:700;color:#166534">&pound;2,325</td><td class="r">&pound;447,000</td><td class="r" style="color:#166534">Reducing</td></tr>
+      <tr><td>Year 10</td><td class="r">12+</td><td class="r" style="color:#166534">Strong</td><td class="r">&pound;36,480</td><td class="r" style="color:#166534">Large surplus</td><td class="r" style="font-weight:700;color:#166534">&pound;3,040</td><td class="r">&pound;640,000</td><td class="r" style="color:#166534">Clear or minimal</td></tr>
+    </table>
+  </div>
+  <p style="font-size:11px;color:#64748b;margin-top:6px">BRRR surplus: ~&pound;13,398/deal &times; 2/yr = &pound;26,796/yr. Rental: &pound;306/mo year 1, 5% growth. Equity: 1.5%/yr value growth on &pound;130k/property. Loan 4% compound, no payments until Year 6.</p>
+</div>
+
+<!-- BREAK-EVEN -->
+<div class="sec">
+  <div class="st">Break-even thresholds &mdash; what has to go wrong to break the model?</div>
+  <div style="overflow-x:auto">
+    <table class="dt" style="min-width:600px">
+      <tr><th>Variable</th><th class="r">Planning figure</th><th class="r">Break-even point</th><th class="r">Margin</th><th class="r">Status</th></tr>
+      <tr><td><strong>Post-refurb value</strong></td><td class="r">&pound;130,000 (verified)</td><td class="r">&pound;112,136 min (133.3% rule)</td><td class="r">&pound;17,864 buffer</td><td class="r"><span class="bd g">Safe</span></td></tr>
+      <tr><td><strong>Surveyor valuation</strong></td><td class="r">Expects full value</td><td class="r">Must not go below 86.3% of &pound;130k</td><td class="r">13.7% surveyor headroom</td><td class="r"><span class="bd a">Monitor</span></td></tr>
+      <tr><td><strong>Hammer price</strong></td><td class="r">&pound;52,000 (data median)</td><td class="r">&pound;64,148 max at &pound;130k PRV</td><td class="r">&pound;12,148 headroom</td><td class="r"><span class="bd g">Safe</span></td></tr>
+      <tr><td><strong>Mortgage rate</strong></td><td class="r">5.25% (5yr fix)</td><td class="r">8.1% (CF = zero)</td><td class="r">+2.9% headroom</td><td class="r"><span class="bd g">Safe</span></td></tr>
+      <tr><td><strong>Monthly rent</strong></td><td class="r">&pound;900</td><td class="r">&pound;572 minimum (CF = zero)</td><td class="r">&pound;328 buffer (36% drop)</td><td class="r"><span class="bd g">Safe</span></td></tr>
+      <tr><td><strong>Void weeks</strong></td><td class="r">2 weeks/yr</td><td class="r">19 weeks max</td><td class="r">17 weeks headroom</td><td class="r"><span class="bd g">Safe</span></td></tr>
+      <tr><td><strong>Supply (deals/yr)</strong></td><td class="r">1.5 target average</td><td class="r">&lt;0.5/yr becomes unsustainable</td><td class="r">Data shows 15&ndash;25/yr available</td><td class="r"><span class="bd a">Monitor</span></td></tr>
+    </table>
+  </div>
+  <div class="ib g" style="margin-top:10px"><p><strong>The model is robust on every dimension except one &mdash; the surveyor.</strong> Every other break-even has a comfortable margin. The surveyor risk at 86.3% is the tightest constraint, and the mitigation is simple: prepare a comparables pack, document works thoroughly, use a different lender if needed. This is manageable with preparation.</p></div>
+</div>
+
+<!-- TAXES -->
+<div class="sec">
+  <div class="st">Tax on disposal &mdash; know before you sell</div>
+  <div class="two">
+    <div>
+      <p style="margin-bottom:8px">The plan is to <strong>hold, not sell</strong>. Refinancing doesn&rsquo;t trigger tax &mdash; only an actual sale does. When a Ltd company sells, the profit is subject to <strong>Corporation Tax (19%)</strong>, not Capital Gains Tax (which applies to individuals).</p>
+      <table class="dt">
+        <tr><td>Hypothetical sale (after 10 years)</td><td class="r">&pound;145,000</td></tr>
+        <tr><td>Purchase price</td><td class="r">&pound;52,000</td></tr>
+        <tr><td>Capital costs deductible (fees, SDLT, survey)</td><td class="r">&pound;8,762</td></tr>
+        <tr><td>Selling costs (~3% agent + solicitor)</td><td class="r">&pound;4,350</td></tr>
+        <tr><td>Taxable gain</td><td class="r">~&pound;79,888</td></tr>
+        <tr><td>Corporation Tax (19%)</td><td class="r">&pound;15,179</td></tr>
+        <tr><td>Dividend extraction (8.75% basic rate)</td><td class="r">~&pound;5,654</td></tr>
+        <tr class="sep"><td><strong>Effective total tax on gain</strong></td><td class="r"><strong>~26%</strong></td></tr>
       </table>
     </div>
     <div>
-      <div class="ib g"><p><strong>Expected scenario:</strong> &pound;22,500 BRRR surplus &times; 2 properties/year = &pound;45,000/year available from Year 1. The &pound;100,000 loan repaid from surplus alone by Year 3&ndash;4. No impact on monthly cashflow or income. Investor can choose continued loan at 4% or settlement at any point.</p></div>
-      <div class="ib a" style="margin-top:10px"><p><strong>Break-even scenario:</strong> Near-zero BRRR surplus means capital returns more slowly via rental income over 4&ndash;5 years. Investor continues earning 4% quarterly from Month 25 throughout. Capital secured against physical property at all times.</p></div>
+      <table class="dt">
+        <tr><th>Factor</th><th class="r">Ltd Co</th><th class="r">Personal</th></tr>
+        <tr><td>Tax on sale profit</td><td class="r">Corp Tax 19%</td><td class="r">CGT 18% (basic rate)</td></tr>
+        <tr><td>Effective rate (basic taxpayer)</td><td class="r">~26%</td><td class="r">~18%</td></tr>
+        <tr><td>Mortgage interest (holding)</td><td class="r" style="color:#166534">100% deductible</td><td class="r" style="color:#991b1b">Not deductible (S.24)</td></tr>
+        <tr><td>Rental income tax</td><td class="r" style="color:#166534">19% Corp Tax</td><td class="r" style="color:#991b1b">20%/40% Income Tax</td></tr>
+      </table>
+      <div class="ib b" style="margin-top:8px"><p><strong>Ltd company vs personal on disposal:</strong> ~26% effective vs ~18% personal for a basic rate taxpayer. But the company saves far more during the holding period through full mortgage interest deductibility. Net position strongly favours the company overall. Get accountancy advice before any planned sale &mdash; there may be planning options.</p></div>
+      <div class="ib a" style="margin-top:8px"><p><strong>Selling costs to budget:</strong> estate agent 1.5&ndash;2.5%, solicitor ~&pound;1,500, EPC if expired, mortgage redemption fee if in fixed term. Total ~3&ndash;4% of sale price. Factor in before deciding to sell.</p></div>
     </div>
   </div>
 </div>
 
-<div class="sec">
-  <div class="st">Risk analysis</div>
-  <table class="dt">
-    <tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr>
-    <tr><td><strong>Nothing at auction</strong></td><td><span class="bd a">Medium</span></td><td>Multiple platforms (Auction House NW, SDL, BidX1). Local agents and probate solicitors for off-market stock. Patient strategy &mdash; never overpay.</td></tr>
-    <tr><td><strong>Post-refurb value disappoints</strong></td><td><span class="bd a">Medium</span></td><td>Break-even thresholds shown above. Independent RICS valuation. One property verified at &pound;130k. Expected scenario has &pound;30k buffer.</td></tr>
-    <tr><td><strong>Refurb cost overrun</strong></td><td><span class="bd a">Medium</span></td><td>Survey before bidding. Fixed-price quotes. 10% contingency every budget. Gareth&rsquo;s trade background and contractor relationships.</td></tr>
-    <tr><td><strong>Mortgage rate rises</strong></td><td><span class="bd a">Medium</span></td><td>5-year fix until 2031. Break-even rate is 8.3% vs current 5.25% &mdash; 3.1% of headroom. Growing rent widens margin year by year.</td></tr>
-    <tr><td><strong>Void periods / problem tenants</strong></td><td><span class="bd g">Low</span></td><td>BAE contractor demand creates consistent tenant pipeline. Local agent manages referencing and TDS deposits. Void allowance already in projections.</td></tr>
-    <tr><td><strong>BAE contracts reduced</strong></td><td><span class="bd g">Low</span></td><td>Dreadnought + AUKUS contracted through 2030s+. Barrow has established residential rental demand at these price points regardless.</td></tr>
-  </table>
-</div>
-
+<!-- NEXT STEPS -->
 <div class="sec">
   <div class="st">Next steps</div>
   <table class="dt">
     <tr><th>#</th><th>Action</th><th>Who</th><th>When</th></tr>
-    <tr><td>1</td><td>Investor confirms commitment and loan amount</td><td>Both</td><td>Week 1</td></tr>
-    <tr><td>2</td><td>Written loan terms agreed and signed by both parties</td><td>Gareth</td><td>Week 1</td></tr>
-    <tr><td>3</td><td>Ltd Company incorporated at Companies House</td><td>Gareth</td><td>Week 1&ndash;2</td></tr>
-    <tr><td>4</td><td>Business bank account opened (Tide or Starling Business)</td><td>Gareth</td><td>Week 2</td></tr>
-    <tr><td>5</td><td>Working capital portion transferred to company</td><td>Investor</td><td>Week 2</td></tr>
-    <tr><td>6</td><td>Specialist Ltd co BTL mortgage broker briefed</td><td>Gareth</td><td>Week 2</td></tr>
-    <tr><td>7</td><td>Property accountant engaged for company setup &amp; tax</td><td>Gareth</td><td>Week 2</td></tr>
-    <tr><td>8</td><td>Auction catalogues monitored &mdash; shortlist begins</td><td>Gareth</td><td>Ongoing</td></tr>
-    <tr><td>9</td><td>Property surveyed, 160% Rule checked, bid limit set</td><td>Gareth</td><td>Before every auction</td></tr>
-    <tr><td>10</td><td>Acquisition capital transferred to company account</td><td>Investor</td><td>Before first auction</td></tr>
-    <tr><td>11</td><td>First property acquired &mdash; refurbishment begins</td><td>Gareth</td><td>Month 2&ndash;3</td></tr>
-    <tr><td>12</td><td>Refurb complete, RICS valuation, BTL mortgage submitted</td><td>Gareth + Broker</td><td>Month 4&ndash;5</td></tr>
-    <tr><td>13</td><td>First quarterly investor update sent</td><td>Gareth</td><td>Month 3, then quarterly</td></tr>
+    <tr><td>1</td><td>Simple written loan agreement &mdash; amount, 4%, no repayment schedule</td><td>Gareth</td><td>Week 1</td></tr>
+    <tr><td>2</td><td>Ltd Company incorporated at Companies House (SIC 68209)</td><td>Gareth</td><td>Week 1&ndash;2</td></tr>
+    <tr><td>3</td><td>Business bank account opened (Tide or Starling Business)</td><td>Gareth</td><td>Week 2</td></tr>
+    <tr><td>4</td><td>Specialist Ltd co BTL mortgage broker briefed &mdash; confirm fees and products upfront</td><td>Gareth</td><td>Week 2</td></tr>
+    <tr><td>5</td><td>Property accountant engaged &mdash; SDLT confirmation, director salary, Corp Tax</td><td>Gareth</td><td>Week 2</td></tr>
+    <tr><td>6</td><td>&pound;100,000 transferred to company account</td><td>Parents</td><td>Week 2&ndash;3</td></tr>
+    <tr><td>7</td><td>Solicitor on standing basis for auction purchases &mdash; agree fees upfront</td><td>Gareth</td><td>Week 3</td></tr>
+    <tr><td>8</td><td>NRLA membership &mdash; tenancy templates, S21/S8, helpline</td><td>Gareth</td><td>Week 3</td></tr>
+    <tr><td>9</td><td>Auction catalogues monitored across all platforms. <strong>Before every auction: check buyer&rsquo;s premium AND admin fee for that specific auction house.</strong></td><td>Gareth</td><td>Ongoing</td></tr>
+    <tr><td>10</td><td>For every candidate property: <strong>(1)</strong> check street-level sold comparables &mdash; do refurbed properties reach &pound;130k+ on this specific street? <strong>(2)</strong> Pre-auction survey. <strong>(3)</strong> Calculate full BRRR with all fees. <strong>(4)</strong> Set hard bid limit.</td><td>Gareth</td><td>Before every bid</td></tr>
+    <tr><td>11</td><td>Property 1 acquired. Solicitor completes within 28 days. Refurb begins immediately.</td><td>Gareth</td><td>Month 2&ndash;4</td></tr>
+    <tr><td>12</td><td>Refurb complete. Prepare comparables pack for surveyor. EPC, gas cert, smoke alarms. RICS valuation. BTL mortgage submitted.</td><td>Gareth + Broker</td><td>Month 5</td></tr>
+    <tr><td>13</td><td>Property let via OpenRent. Full referencing. TDS deposit registration. Sign AST.</td><td>Gareth</td><td>Month 6</td></tr>
+    <tr><td>14</td><td>Quarterly update to parents &mdash; bank statements, properties, rental income, loan balance</td><td>Gareth</td><td>Every 3 months</td></tr>
   </table>
-  <div style="margin-top:18px;background:#1a3557;border-radius:10px;padding:18px 22px;text-align:center;color:#fff">
-    <div style="font-size:17px;font-weight:700;margin-bottom:4px">Gareth (Gaz) Sutton &middot; Managing Director (proposed)</div>
-    <div style="font-size:13px;color:#90b8d0">Coniston, Cumbria &middot; April 2026 &middot; Private &amp; Confidential</div>
-    <div style="font-size:12px;color:#60889a;margin-top:7px">Based on a completed, verified property transaction and ONS/Land Registry market data (April 2026). All projections are estimates. Independent financial and legal advice recommended before committing funds.</div>
+  <div style="margin-top:16px;background:#1a3557;border-radius:10px;padding:16px 20px;text-align:center;color:#fff">
+    <div style="font-size:16px;font-weight:700;margin-bottom:3px">Gareth (Gaz) Sutton &middot; Managing Director (proposed)</div>
+    <div style="font-size:12px;color:#90b8d0;margin-bottom:4px">Coniston, Cumbria &middot; April 2026 &middot; Private &amp; Confidential</div>
+    <div style="font-size:11px;color:#60889a">Verified against 12,246 Barrow transactions (Land Registry 2015&ndash;2026). All fees included (SDLT, buyer&rsquo;s premium, legal, survey, RICS, broker, compliance). Self-managed. Surveyor risk modelled. Corporation Tax on disposal included. No bedroom count in dataset &mdash; 4-bed assumptions based on sq ft proxies and Gareth&rsquo;s verified deal. Independent accountancy and legal advice recommended.</div>
   </div>
 </div>
 
